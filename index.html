@@ -5,11 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yu Sugihara's Website</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/png"> <!-- Favicon -->
     <style>
-        /* Line spacing adjustments for better readability */
-        p, ul {
+        /* General text line spacing */
+        p {
             line-height: 1.6;
+        }
+        /* Adjusts line spacing between list items (links) */
+        ul li {
+            line-height: 1.4;
+        }
+        /* Container to hold both image and text */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        /* Style for the profile image without circular shape */
+        .profile-image {
+            max-width: 250px; /* Size of the profile image */
+            margin-right: 20px; /* Spacing between image and text */
+        }
+        /* Style for the text content next to the image */
+        .content {
+            flex: 1; /* Allow text content to expand */
+        }
+        /* Makes the layout responsive for smaller screens */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stacks the image and text vertically on smaller screens */
+            }
         }
     </style>
 </head>
@@ -24,16 +50,24 @@
     </header>
 
     <main>
-        <h2>About Me</h2>
-        <p></p>
+        <div class="container">
+            <img src="images/y-sugihara.png" alt="Yu Sugihara" class="profile-image"> <!-- Profile Image -->
 
-        <h2>Links</h2>
-        <ul>
-            <li><a href="https://scholar.google.co.jp/citations?user=9Oa_0ScAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
-            <li><a href="https://github.com/YuSugihara" target="_blank">GitHub</a></li>
-            <li><a href="https://orcid.org/0000-0001-6042-1091" target="_blank">ORCID</a></li>
-            <li><a href="https://twitter.com/YuSugiharaY" target="_blank">Twitter (X)</a></li> <!-- Twitter (X)として両方を表示 -->
-        </ul>
+            <div class="content">
+                <h2>Yu Sugihara</h2>
+                <p>Postdoc<br>
+                Iwate Biotechnology Research Center, Japan<br>
+                y-sugihara@ibrc.or.jp</p> <!-- Email address without a link -->
+
+                <h2>Links</h2>
+                <ul>
+                    <li><a href="https://scholar.google.co.jp/citations?user=9Oa_0ScAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+                    <li><a href="https://github.com/YuSugihara" target="_blank">GitHub</a></li>
+                    <li><a href="https://orcid.org/0000-0001-6042-1091" target="_blank">ORCID</a></li>
+                    <li><a href="https://twitter.com/YuSugiharaY" target="_blank">Twitter (X)</a></li>
+                </ul>
+            </div>
+        </div>
     </main>
 
     <footer>
