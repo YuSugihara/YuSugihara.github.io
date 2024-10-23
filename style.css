@@ -83,7 +83,7 @@ ul {
 }
 
 ul li {
-    margin-bottom: 20px; /* Reduces space between CV items */
+    margin-bottom: 15px; /* Reduces space between CV items */
     line-height: 1.6; /* Default line spacing */
 }
 
