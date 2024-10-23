@@ -11,30 +11,42 @@
         p {
             line-height: 1.6;
         }
-        /* Adjusts line spacing between list items (links) */
-        ul li {
-            line-height: 1.4;
-        }
-        /* Container to hold both image and text */
+        /* Container to hold both image and text, flexible layout */
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
             align-items: flex-start;
         }
-        /* Style for the profile image without circular shape */
+        /* Style for the profile image */
         .profile-image {
-            max-width: 250px; /* Size of the profile image */
-            margin-right: 20px; /* Spacing between image and text */
+            max-width: 240px; /* Slightly increased size */
+            margin-right: 20px; /* Space between image and text */
         }
-        /* Style for the text content next to the image */
+        /* Style for the content next to the image */
         .content {
-            flex: 1; /* Allow text content to expand */
+            flex: 1;
         }
-        /* Makes the layout responsive for smaller screens */
+        /* Style for inline link display, left-aligned */
+        .links {
+            margin-top: 20px;
+            text-align: left; /* Left-aligns the links */
+        }
+        .links a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        /* Responsive layout for smaller screens */
         @media screen and (max-width: 768px) {
             .container {
-                flex-direction: column; /* Stacks the image and text vertically on smaller screens */
+                flex-direction: column; /* Stack image and text vertically */
+            }
+            .links {
+                text-align: center; /* Center links on smaller screens */
             }
         }
     </style>
@@ -54,18 +66,16 @@
             <img src="images/y-sugihara.png" alt="Yu Sugihara" class="profile-image"> <!-- Profile Image -->
 
             <div class="content">
-                <h2>Yu Sugihara</h2>
                 <p>Postdoc<br>
                 Iwate Biotechnology Research Center, Japan<br>
-                y-sugihara@ibrc.or.jp</p> <!-- Email address without a link -->
+                y-sugihara@ibrc.or.jp</p> <!-- Introduction text -->
 
-                <h2>Links</h2>
-                <ul>
-                    <li><a href="https://scholar.google.co.jp/citations?user=9Oa_0ScAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
-                    <li><a href="https://github.com/YuSugihara" target="_blank">GitHub</a></li>
-                    <li><a href="https://orcid.org/0000-0001-6042-1091" target="_blank">ORCID</a></li>
-                    <li><a href="https://twitter.com/YuSugiharaY" target="_blank">Twitter (X)</a></li>
-                </ul>
+                <div class="links">
+                    <a href="https://scholar.google.co.jp/citations?user=9Oa_0ScAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+                    <a href="https://github.com/YuSugihara" target="_blank">GitHub</a> |
+                    <a href="https://orcid.org/0000-0001-6042-1091" target="_blank">ORCID</a> |
+                    <a href="https://twitter.com/YuSugiharaY" target="_blank">Twitter (X)</a>
+                </div>
             </div>
         </div>
     </main>

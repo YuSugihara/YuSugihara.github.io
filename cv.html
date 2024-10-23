@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Yu Sugihara</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.png" type="image/png">
     <style>
         /* Increases line spacing for better readability */
         ul li {
@@ -18,11 +17,20 @@
             font-weight: bold;
             color: #4CAF50;
         }
-        /* Supervisor information style */
-        .supervisor {
-            margin-left: 20px; /* Adds indentation for Supervisor */
-            font-style: italic;
-            color: #555;
+        /* Style for degrees (PhD, MSc) to emphasize with a slight gray tint */
+        .degree {
+            font-weight: bold;
+            color: #555; /* Slight grayish tint */
+        }
+        /* Style for the Download CV text */
+        .download-cv {
+            font-size: 1em;
+            font-weight: normal;
+            color: #4CAF50;
+            text-decoration: none;
+            display: block;
+            margin-top: 50px;
+            text-align: center; /* Centers the link */
         }
     </style>
 </head>
@@ -39,9 +47,9 @@
     <main>
         <h2>Education</h2>
         <ul>
-            <li><span class="cv-period">2023</span> Ph. D, Graduate School of Agriculture, Kyoto University, Japan</li>
-            <li><span class="cv-period">2020</span> MSc, Graduate School of Agriculture, Kyoto University, Japan</li>
-            <li><span class="cv-period">2018</span> BSc, Department of Agriculture, Kyoto University, Japan</li>
+            <li><span class="cv-period">2023</span> <span class="degree">Ph. D</span>, Graduate School of Agriculture, Kyoto University, Japan</li>
+            <li><span class="cv-period">2020</span> <span class="degree">MSc</span>, Graduate School of Agriculture, Kyoto University, Japan</li>
+            <li><span class="cv-period">2018</span> <span class="degree">BSc</span>, Department of Agriculture, Kyoto University, Japan</li>
         </ul>
         <p class="supervisor">Supervisor: Prof. Ryohei Terauchi</p>
 
@@ -57,6 +65,8 @@
         <ul>
             <li>Postdoctoral oral presentation award, <em>The 26th Annual Meeting of Society for Evolutionary Studies</em>, Japan. Aug. 2024</li>
         </ul>
+
+        <a href="https://github.com/YuSugihara/YuSugihara.github.io/blob/master/CV/Yu_Sugihara_CV.pdf" target="_blank" class="download-cv">Download CV</a> <!-- Centered Download CV link -->
     </main>
 
     <footer>
