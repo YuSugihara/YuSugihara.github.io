@@ -3,57 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yu Sugihara's Website</title>
+    <title>Yu Sugihara - Homepage</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.png" type="image/png"> <!-- Favicon -->
     <style>
-        /* General text line spacing */
-        p {
-            line-height: 1.6;
-        }
-        /* Container to hold both image and text, flexible layout */
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            align-items: flex-start;
-        }
-        /* Style for the profile image */
-        .profile-image {
-            max-width: 240px; /* Slightly increased size */
-            margin-right: 20px; /* Space between image and text */
-        }
-        /* Style for the content next to the image */
-        .content {
-            flex: 1;
-        }
-        /* Style for inline link display, left-aligned */
-        .links {
-            margin-top: 20px;
-            text-align: left; /* Left-aligns the links */
-        }
-        .links a {
-            color: #4CAF50;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .links a:hover {
-            text-decoration: underline;
-        }
-        /* Responsive layout for smaller screens */
-        @media screen and (max-width: 768px) {
-            .container {
-                flex-direction: column; /* Stack image and text vertically */
-            }
-            .links {
-                text-align: center; /* Center links on smaller screens */
-            }
+        /* Inline styling specifically for profile text line spacing */
+        .profile-section {
+            line-height: 1.2; /* Adjusted line spacing for better readability */
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Yu Sugihara's Homepage</h1>
+        <a href="index.html" class="logo">Yu Sugihara</a>
         <nav>
             <a href="index.html">Home</a>
             <a href="publications.html">Publications</a>
@@ -61,24 +22,23 @@
         </nav>
     </header>
 
-    <main>
-        <div class="container">
-            <img src="images/y-sugihara.png" alt="Yu Sugihara" class="profile-image"> <!-- Profile Image -->
-
-            <div class="content">
-                <p>Postdoc<br>
-                Iwate Biotechnology Research Center, Japan<br>
-                y-sugihara@ibrc.or.jp</p> <!-- Introduction text -->
-
-                <div class="links">
-                    <a href="https://scholar.google.co.jp/citations?user=9Oa_0ScAAAAJ&hl=en" target="_blank">Google Scholar</a> |
-                    <a href="https://github.com/YuSugihara" target="_blank">GitHub</a> |
-                    <a href="https://orcid.org/0000-0001-6042-1091" target="_blank">ORCID</a> |
-                    <a href="https://twitter.com/YuSugiharaY" target="_blank">Twitter (X)</a>
-                </div>
-            </div>
-        </div>
-    </main>
+    <div class="wrapper">
+        <main>
+            <section class="profile-section">
+                <img src="images/y-sugihara.png" alt="Yu Sugihara" class="profile-image">
+                <h1>Yu Sugihara</h1>
+                <p>Postdoc</p>
+                <p>Iwate Biotechnology Research Center, Japan</p>
+                <p>y-sugihara@ibrc.or.jp</p>
+            </section>
+            <section class="links">
+                <a href="https://scholar.google.co.jp/citations?user=9Oa_0ScAAAAJ&hl=en" target="_blank">Google Scholar</a> |
+                <a href="https://github.com/YuSugihara" target="_blank">GitHub</a> |
+                <a href="https://orcid.org/0000-0001-6042-1091" target="_blank">ORCID</a> |
+                <a href="https://twitter.com/YuSugiharaY" target="_blank">Twitter (X)</a>
+            </section>
+        </main>
+    </div>
 
     <footer>
         <p>&copy; 2024 Yu Sugihara</p>

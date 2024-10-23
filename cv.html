@@ -6,23 +6,28 @@
     <title>CV - Yu Sugihara</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Increases line spacing for better readability */
-        ul li {
-            margin-bottom: 15px;
-        }
+        /* Inline styling for consistent heading and text spacing */
         h2 {
+            font-size: 24px; /* Matches the heading style from index.html */
             margin-top: 30px;
+            margin-left: 0;
+        }
+        .cv-section {
+            line-height: 1.4; /* Improved line spacing for better readability */
         }
         .cv-period {
             font-weight: bold;
             color: #4CAF50;
         }
-        /* Style for degrees (PhD, MSc) to emphasize with a slight gray tint */
         .degree {
             font-weight: bold;
-            color: #555; /* Slight grayish tint */
+            color: #555;
         }
-        /* Style for the Download CV text */
+        .supervisor {
+            font-style: italic;
+            margin-bottom: 15px;
+            display: block;
+        }
         .download-cv {
             font-size: 1em;
             font-weight: normal;
@@ -36,7 +41,7 @@
 </head>
 <body>
     <header>
-        <h1>Curriculum Vitae - Yu Sugihara</h1>
+        <a href="index.html" class="logo">Yu Sugihara</a>
         <nav>
             <a href="index.html">Home</a>
             <a href="publications.html">Publications</a>
@@ -44,30 +49,33 @@
         </nav>
     </header>
 
-    <main>
-        <h2>Education</h2>
-        <ul>
-            <li><span class="cv-period">2023</span> <span class="degree">Ph. D</span>, Graduate School of Agriculture, Kyoto University, Japan</li>
-            <li><span class="cv-period">2020</span> <span class="degree">MSc</span>, Graduate School of Agriculture, Kyoto University, Japan</li>
-            <li><span class="cv-period">2018</span> <span class="degree">BSc</span>, Department of Agriculture, Kyoto University, Japan</li>
-        </ul>
-        <p class="supervisor">Supervisor: Prof. Ryohei Terauchi</p>
+    <div class="wrapper">
+        <main>
+            <section class="cv-section">
+                <h2>Education</h2>
+                <ul>
+                    <li><span class="cv-period">2023</span> <span class="degree">Ph. D</span>, Graduate School of Agriculture, Kyoto University, Japan</li>
+                    <li><span class="cv-period">2020</span> <span class="degree">MSc</span>, Graduate School of Agriculture, Kyoto University, Japan</li>
+                    <li><span class="cv-period">2018</span> <span class="degree">BSc</span>, Department of Agriculture, Kyoto University, Japan</li>
+                </ul>
+                <p class="supervisor">Supervisor: Prof. Ryohei Terauchi</p>
 
-        <h2>Research Experience</h2>
-        <ul>
-            <li><span class="cv-period">Apr. 2024 – present</span>: Postdoc at Division of Genomics & Breeding, Iwate Biotechnology Research Center, Japan</li>
-            <li><span class="cv-period">Apr. 2023 – Mar. 2024</span>: Postdoc at The Sainsbury Laboratory, UK (Sophien Kamoun group)</li>
-            <li><span class="cv-period">Oct. 2021 – Mar. 2023</span>: Internship at The Sainsbury Laboratory, UK (Sophien Kamoun group)</li>
-            <li><span class="cv-period">Apr. 2019 – Sep. 2021</span>: Visiting Researcher at Division of Genomics & Breeding, Iwate Biotechnology Research Center, Japan</li>
-        </ul>
+                <h2>Research Experience</h2>
+                <ul>
+                    <li><span class="cv-period">Apr. 2024 – present</span>: Postdoc at Division of Genomics & Breeding, Iwate Biotechnology Research Center, Japan</li>
+                    <li><span class="cv-period">Apr. 2023 – Mar. 2024</span>: Postdoc at The Sainsbury Laboratory, UK (Sophien Kamoun group)</li>
+                    <li><span class="cv-period">Oct. 2021 – Mar. 2023</span>: Internship at The Sainsbury Laboratory, UK (Sophien Kamoun group)</li>
+                    <li><span class="cv-period">Apr. 2019 – Sep. 2021</span>: Visiting Researcher at Division of Genomics & Breeding, Iwate Biotechnology Research Center, Japan</li>
+                </ul>
 
-        <h2>Awards</h2>
-        <ul>
-            <li>Postdoctoral oral presentation award, <em>The 26th Annual Meeting of Society for Evolutionary Studies</em>, Japan. Aug. 2024</li>
-        </ul>
-
-        <a href="https://github.com/YuSugihara/YuSugihara.github.io/blob/master/CV/Yu_Sugihara_CV.pdf" target="_blank" class="download-cv">Download CV</a> <!-- Centered Download CV link -->
-    </main>
+                <h2>Awards</h2>
+                <ul>
+                    <li>Postdoctoral oral presentation award, <em>The 26th Annual Meeting of Society for Evolutionary Studies</em>, Japan. Aug. 2024</li>
+                </ul>
+            </section>
+            <a href="https://github.com/YuSugihara/YuSugihara.github.io/blob/master/CV/Yu_Sugihara_CV.pdf" target="_blank" class="download-cv">Download CV</a>
+        </main>
+    </div>
 
     <footer>
         <p>&copy; 2024 Yu Sugihara</p>
