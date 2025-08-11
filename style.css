@@ -140,8 +140,22 @@ img{ max-width:100%; display:block }
 @media (max-width: 760px){
   .hero{ grid-template-columns: 1fr }
   .avatar{ width:min(68vw, 360px) }
-  /* New: force one card per row on small screens */
+
+  /* Cards: one per row on small screens */
   .cards{ grid-template-columns: 1fr }
+
+  /* Tweets: stack vertically and avoid horizontal clipping */
+  .tweet-pins{ flex-direction: column; flex-wrap: nowrap }
+  .tweet-pin{
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+  .tweet-pin .twitter-tweet{
+    width: 100% !important;
+    min-width: 0;
+  }
 }
 
 /* Motion accessibility: Remove transitions for users who prefer reduced motion */
