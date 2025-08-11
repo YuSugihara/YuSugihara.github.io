@@ -140,6 +140,8 @@ img{ max-width:100%; display:block }
 @media (max-width: 760px){
   .hero{ grid-template-columns: 1fr }
   .avatar{ width:min(68vw, 360px) }
+  /* New: force one card per row on small screens */
+  .cards{ grid-template-columns: 1fr }
 }
 
 /* Motion accessibility: Remove transitions for users who prefer reduced motion */
