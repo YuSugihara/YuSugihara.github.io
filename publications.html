@@ -1,91 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Yu Sugihara</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <style>
-        /* Inline styles for consistency */
-        h2 {
-            font-size: 24px;
-            margin-top: 30px;
-            margin-left: 0;
-        }
-        .pub-section {
-            line-height: 1.4;
-        }
-        .highlight {
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        .italic {
-            font-style: italic;
-        }
-        .title-link {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications — Yu Sugihara</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Page-specific tweaks */
+    .card ol > li { margin: 0 0 22px 0; }
+    .card ol > li:last-child { margin-bottom: 0; }
+
+    /* My name: bold + underline, not brand color */
+    .highlight { color: inherit; font-weight: 700; text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 2px; }
+    .card .authors .highlight { color: inherit !important; font-weight: 700; text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 2px; }
+
+    /* Journal names (the strong right after the title link) should be italic */
+    .pub-title + strong { font-style: italic; }
+  </style>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">Yu Sugihara</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="publications.html">Publications</a>
-            <a href="cv.html">CV</a>
-        </nav>
-    </header>
+  <header class="site-header">
+    <a class="brand" href="index.html">Yu Sugihara</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="publications.html" aria-current="page">Publications</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </header>
 
-    <div class="wrapper">
-        <main>
-            <section class="pub-section">
-                <br><b>Yu Sugihara's <a href="https://scholar.google.co.jp/citations?user=9Oa_0ScAAAAJ&hl=en" class="title-link" target="_blank">Google Scholar profile</a></b>
-                <h2>Preprints</h2>
-                <ol>
-                    <li>Pai H, Sakai T, Posbeyikian A, Frijters R, <span class="highlight">Sugihara Y</span>, Contreras MP, Kourelis J, Adachi H, Kamoun S, Toghani A (2025) <a href="https://doi.org/10.1101/2025.02.25.639832" class="title-link" target="_blank">A hierarchical immune receptor network in lettuce reveals contrasting patterns of evolution in sensor and helper NLRs</a>. <em>bioRxiv</em>. DOI:10.1101/2025.02.25.639832</li>
-                    <li>Kudoh A, Natsume S, <span class="highlight">Sugihara Y</span>, Kato H, Abe A, Oikawa K, Shimizu M, Itoh K, Tsujimura M, Takano Y, Sakai T, Adachi H, Ohta A, Ohtsu M, Ishizaki T, Terachi T, Terauchi R (2025) <a href="https://doi.org/10.1101/2025.04.28.650915" class="title-link" target="_blank">Whole-genome sequencing reveals the molecular basis of sex determination in the dioecious wild yam (<span class="italic">Dioscorea tokoro</span>)</a>. <em>bioRxiv</em>. DOI:10.1101/2025.04.28.650915</li>
-                    <li>Fujisaki K, Abe Y, <span class="highlight">Sugihara Y</span>, Nemoto K, Ito K, Kanzaki E, Ishikawa K, Iwai M, Utsushi H, Saitoh H, Takagi H, Takeda T, Abe A, Zheng S, Bialas A, Banfield MJ, Kamoun S, Terauchi R (2024) <a href="https://doi.org/10.1101/239400" class="title-link" target="_blank">Binding of a pathogen effector to rice Exo70 proteins tethered to the NOI/RIN4 integrated domain of the NLR receptor Pii2 confers immunity against fungi</a>. <em>bioRxiv</em>. DOI:10.1101/239400</li>
-                </ol>
+  <main class="container">
+    <!-- Page header card -->
+      <div>
+        <div class="chips" style="margin-top:10px;">
+          <a class="chip" href="https://scholar.google.com/citations?user=9Oa_0ScAAAAJ&hl=en" target="_blank" rel="noopener">View on Google Scholar</a>
+        </div>
+      </div>
 
-                <h2>Publications</h2>
-                <ol>
-                    <li>Toghani A, Frijters R, Bozkurt TO, Terauchi R, Kamoun S*, <span class="highlight">Sugihara Y</span>* (2025) <a href="https://doi.org/10.1111/nph.70391" class="title-link" target="_blank">Can AI modeling of protein structures distinguish between sensor and helper NLR immune receptors?</a>. <em>New Phytologist</em>, DOI:10.1111/nph.70391 *Corresponding authors</li>
-                    <li><span class="highlight">Sugihara Y</span>, Kourelis J, Contreras MP, Pai H, Harant A, Selvaraj M, Toghani A, Martinez-Anaya C*, Kamoun S* (2025) <a href="https://doi.org/10.1371/journal.pgen.1011653" class="title-link" target="_blank">Helper NLR immune protein NRC3 evolved to evade inhibition by a cyst nematode virulence effector</a>. <em>PLOS Genetics</em>, 21:e1011653. DOI:10.1371/journal.pgen.1011653 *Corresponding authors</li>
-                    <li>Selvaraj M, Toghani A, Pai H, <span class="highlight">Sugihara Y</span>, Kourelis J, Yuen ELH, Ibrahim T, Zhao H, Xie R, Maqbool A, Concepcion JCD la, Banfield MJ, Derevnina L, Petre B, Lawson DM, Bozkurt TO, Wu C-H, Kamoun S*, Contreras MP* (2024) <a href="https://doi.org/10.1371/journal.pbio.3002868" class="title-link" target="_blank">Activation of plant immunity through conversion of a helper NLR homodimer into a resistosome</a>. <em>PLOS Biology</em>, 22:e3002868. DOI:10.1371/journal.pbio.3002868 *Corresponding authors</li>
-                    <li>Huang C-Y, Huang Y-S, <span class="highlight">Sugihara Y</span>, Wang H-Y, Huang L-T, Lopez-Agudelo JC, Chen Y-F, Lin K-Y, Chiang B-J, Toghani A, Kourelis J, Wang C-H, Derevnina L, Wu C-H (2024) <a href="https://doi.org/10.1371/journal.pgen.1011402" class="title-link" target="_blank">Subfunctionalization of NRC3 altered the genetic structure of the <span class="italic">Nicotiana</span> NRC network</a>. <em>PLOS Genetics</em>, 20:e1011402. DOI:10.1371/journal.pgen.1011402</li>
-                    <li>Sugimura Y, Oikawa K, <span class="highlight">Sugihara Y</span>, Utsushi H, Kanzaki E, Ito K, Ogasawara Y, Fujioka T, Takagi H, Shimizu M, Shimono H, Terauchi R, Abe A (2024) <a href="https://doi.org/10.1371/journal.pgen.1011369" class="title-link" target="_blank">Impact of rice <span class="italic">GENERAL REGULATORY FACTOR14h</span> (GF14h) on low-temperature seed germination and its application to breeding</a>. <em>PLOS Genetics</em>, 20:e1011369. DOI: 10.1371/journal.pgen.1011369</li>
-                    <li>Barragan AC*, Latorre SM*<sup>+</sup>, Malmgren A, Harant A, Win J, <span class="highlight">Sugihara Y</span>, Burbano HA, Kamoun S*, Langner T* (2024) <a href="https://doi.org/10.1093/molbev/msae164" class="title-link" target="_blank">Multiple horizontal mini-chromosome transfers drive genome evolution of clonal blast fungus lineages</a>. <em>Molecular Biology and Evolution</em>, 41:msae164. DOI: 10.1093/molbev/msae164 <sup>+</sup>Authors contributed equally, <sup>*</sup>Corresponding authors</li>
-                    <li><span class="highlight">Sugihara Y</span>, Abe Y, Takagi H, Abe A, Shimizu M, Ito K, Kanzaki E, Oikawa K, Kourelis J, Langner T, Win J, Białas A, Lüdke D, Contreras MP, Chuma I, Saitoh H, Kobayashi M, Zheng S, Tosa Y, Banfield MJ, Kamoun S*, Terauchi R*, Fujisaki K* (2023) <a href="https://doi.org/10.1371/journal.pbio.3001945" class="title-link" target="_blank">Disentangling the complex gene interaction networks between rice and the blast fungus identifies a new pathogen effector</a>. <em>PLOS Biology</em>, 21:e3001945. DOI: 10.1371/journal.pbio.3001945 *Corresponding authors</li>
-                    <li>Nishiyama C, Sekiguchi S, <span class="highlight">Sugihara Y</span>, Nishikawa M, Makita N, Segawa T, Terasaki M, Takagi H, Koyanagi T (2023) <a href="https://doi.org/10.12938/bmfh.2022-017" class="title-link" target="_blank">Phylogenomic analysis in <span class="italic">Latilactobacillus sakei</span> by using polymorphisms detected by next-generation sequencing</a>. <em>Bioscience of Microbiota, Food and Health</em>, advpub:2022–017. DOI: 10.12938/bmfh.2022-017</li>
-                    <li>Saiga S, Tada M, Segawa T, <span class="highlight">Sugihara Y</span>, Nishikawa M, Makita N, Sakamoto M, Tanaka K, Wada T, Takagi H (2023) <a href="https://doi.org/10.1007/s10681-022-03132-7" class="title-link" target="_blank">NGS-based genome wide association study helps to develop co-dominant marker for the physical map-based locus of PFRU controlling flowering in cultivated octoploid strawberry</a>. <em>Euphytica</em>, 219:6. DOI: 10.1007/s10681-022-03132-7</li>
-                    <li>Takeda T*, Takahashi M, Shimizu M, <span class="highlight">Sugihara Y</span>, Saitoh H, Fujisaki K, Ishikawa K, Utsushi H, Kanzaki E, Sakamoto Y, Abe A, Terauchi R* (2022) <a href="https://doi.org/10.1371/journal.ppat.1010792" class="title-link" target="_blank">Rice apoplastic CBM1-interacting protein counters blast pathogen invasion by binding conserved carbohydrate binding module 1 motif of fungal proteins</a>. <em>PLOS Pathogens</em>, 18(9): e1010792. DOI: 10.1371/journal.ppat.1010792 *Corresponding authors</li>
-                    <li>Natsume S, <span class="highlight">Sugihara Y</span>, Kudoh A, Oikawa K, Shimizu M, Ishikawa Y, Nishihara M, Abe A, Innan H, Terauchi R (2022) <a href="https://doi.org/10.1093/pcp/pcac109" class="title-link" target="_blank">Genome Analysis Revives a Forgotten Hybrid Crop Edo-dokoro in the Genus <span class="italic">Dioscorea</span></a>. <em>Plant and Cell Physiology</em>, pcac109. DOI: 10.1093/pcp/pcac109</li>
-                    <li>Shimizu M, Hirabuchi A, <span class="highlight">Sugihara Y</span>, Abe A, Takeda T, Kobayashi M, Hiraka Y, Kanzaki E, Oikawa K, Saitoh H, Langner T, Banfield MJ, Kamoun S, Terauchi R (2022) <a href="https://doi.org/10.1073/pnas.2116896119" class="title-link" target="_blank">A genetically linked pair of NLR immune receptors show contrasting patterns of evolution</a>. <em>Proceedings of the National Academy of Sciences</em>, 119(27): e2116896119. DOI: 10.1073/pnas.2116896119</li>
-                    <li><span class="highlight">Sugihara Y</span>, Young L, Yaegashi H, Natsume S, Shea DJ, Takagi H, Booker H, Innan H, Terauchi R, Abe A (2022) <a href="https://doi.org/10.7717/peerj.13170" class="title-link" target="_blank">High-performance pipeline for MutMap and QTL-seq</a>. <em>PeerJ</em>, 10:e13170. DOI: 10.7717/peerj.13170</li>
-                    <li><span class="highlight">Sugihara Y</span><sup>+</sup>, Kudoh A<sup>+</sup>, Tamiru-Oli M, Takagi H, Natsume S, Shimizu M, Abe A, Asiedu R, Asfaw A, Adebola P, Terauchi R (2021) <a href="https://doi.org/10.1007/13836_2021_94" class="title-link" target="_blank">Population genomics of yams: evolution and domestication of <span class="italic">Dioscorea</span> species</a>. In: Population Genomics. <em>Springer, Cham</em>. DOI: 10.1007/13836_2021_94 <sup>+</sup>Authors contributed equally</li>
-                    <li>Segawa T, Nishiyama C, Tamiru-Oli M, <span class="highlight">Sugihara Y</span>, Abe A, Sone H, Itoh N, Asukai M, Uemura A, Oikawa K, Utsushi H, Ikegami-Katayama A, Imamura T, Mori M, Terauchi R, Takagi H (2021) <a href="https://doi.org/10.1270/jsbbs.20148" class="title-link" target="_blank">Sat-BSA: an NGS-based method using local de novo assembly of long reads for rapid identification of genomic structural variations associated with agronomic traits</a>. <em>Breeding Science</em>, 71(3): 299–312. DOI: 10.1270/jsbbs.20148</li>
-                    <li><span class="highlight">Sugihara Y</span>, Darkwa K, Yaegashi H, Natsume S, Shimizu M, Abe A, Hirabuchi A, Ito K, Oikawa K, Tamiru-Oli M, Ohta A, Matsumoto R, Agre P, De Koeyer D, Pachakkil B, Yamanaka S, Muranaka S, Takagi H, White B, Asiedu R, Innan H, Asfaw A*, Adebola P*, Terauchi R* (2020) <a href="https://doi.org/10.1073/pnas.2015830117" class="title-link" target="_blank">Genome analyses reveal the hybrid origin of the staple food crop white Guinea yam (<span class="italic">Dioscorea rotundata</span>)</a>. <em>Proceedings of the National Academy of Sciences</em>, 17(50): 31987–31992. DOI: 10.1073/pnas.2015830117 *Corresponding authors</li>
-                </ol>
+    <!-- Preprints -->
+    <section class="card" style="margin-top:18px;">
+      <h3>Preprints</h3>
+      <ol reversed>
+        <li><span class="authors">Pai H, Sakai T, Posbeyikian A, Frijters R, <span class="highlight">Sugihara Y</span>, Contreras MP, Kourelis J, Adachi H, Kamoun S, Toghani A</span> (2025).
+          <a class="pub-title" href="https://doi.org/10.1101/2025.02.25.639832" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">A hierarchical immune receptor network in lettuce reveals contrasting patterns of evolution in sensor and helper NLRs</a>.
+          <em>bioRxiv</em>. DOI:10.1101/2025.02.25.639832
+        </li>
+        <li><span class="authors">Kudoh A, Natsume S, <span class="highlight">Sugihara Y</span>, Kato H, Abe A, Oikawa K, Shimizu M, Itoh K, Tsujimura M, Takano Y, Sakai T, Adachi H, Ohta A, Ohtsu M, Ishizaki T, Terachi T, Terauchi R</span> (2025).
+          <a class="pub-title" href="https://doi.org/10.1101/2025.04.28.650915" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Whole-genome sequencing reveals the molecular basis of sex determination in the dioecious wild yam (<span class="italic">Dioscorea tokoro</span>)</a>.
+          <em>bioRxiv</em>. DOI:10.1101/2025.04.28.650915
+        </li>
+        <li><span class="authors">Fujisaki K, Abe Y, <span class="highlight">Sugihara Y</span>, Nemoto K, Ito K, Kanzaki E, Ishikawa K, Iwai M, Utsushi H, Saitoh H, Takagi H, Takeda T, Abe A, Zheng S, Bialas A, Banfield MJ, Kamoun S, Terauchi R</span> (2024).
+          <a class="pub-title" href="https://doi.org/10.1101/239400" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Binding of a pathogen effector to rice Exo70 proteins tethered to the NOI/RIN4 integrated domain of the NLR receptor Pii2 confers immunity against fungi</a>.
+          <em>bioRxiv</em>. DOI:10.1101/239400
+        </li>
+      </ol>
+    </section>
 
-                <h2>Presentations</h2>
-                <ol>
-                    <li><span class="highlight">Sugihara Y</span>, Toghani A, Frijters R, Bozkurt TO, Terauchi R, Kamoun S. Can AI modelling of protein structures distinguish between sensor and helper NLR immune receptors? <em>2025 IS-MPMI</em>. Cologne, Germany. July 2025.</li>
-                    <li><span class="highlight">Sugihara Y</span>, Kourelis J, Contreras MP, Pai H, Selvaraj M, Toghani A, Martinez-Anaya C, Kamoun S. Helper NLR immune protein NRC3 evolved to evade inhibition by a cyst nematode virulence effector. <em>The 26th Annual Meeting of Society for Evolutionary Studies</em>, Japan. Kanagawa, Japan. Aug. 2024.</li>
-                    <li><span class="highlight">Sugihara Y</span>, Białas A, Langner T, Barragan AC, Kourelis J, Abe Y, Fujisaki K, Banfield MJ, Terauchi R, Kamoun S. The NLR immune receptor Pik-1 evolved to respond to fungal effectors of the AVR-Mgk family early in the evolution of <span class="italic">Oryza</span> and prior to rice domestication. <em>2023 IS-MPMI</em>. Rhode Island, PA. July 2023.</li>
-                    <li><span class="highlight">Sugihara Y</span>. Genetics approach using whole genome sequencing to rapidly identify the genomic loci involved in biological traits of rice blast fungus. <em>12th Japan-US Seminar in Plant Pathology</em>. Zoom workshop. October 2020.</li>
-                    <li><span class="highlight">Sugihara Y</span>, Natsume S, Abe A, Shimizu M, Obidiegwu J, Terauchi R. Population genomics of <span class="italic">Dioscorea tokoro</span>, a wild yam species. <em>Plant and Animal Genome (PAG) XXVII Conference</em>. San Diego, CA. January 2019.</li>
-                    <li><span class="highlight">Sugihara Y</span>, Abe A, Shimizu M, Yaegashi H, Natsume S, Obidiegwu J, Terauchi R. Application of population genomics and GWAS to <span class="italic">Dioscorea rotundata</span> (white Guinea yams) for identifying loci controlling agronomically important traits. <em>Plant and Animal Genome (PAG) XXVII Conference</em>. San Diego, CA. January 2019.</li>
-                </ol>
-            </section>
-        </main>
-    </div>
+    <!-- Publications -->
+    <section class="card" style="margin-top:18px;">
+      <h3>Publications</h3>
+      <p class="note" style="margin-top:10px; font-size:0.95em; color: var(--text-2, #666);">* Corresponding authors、+ Authors contributed equally</p>
+      <ol reversed>
+        <li><span class="authors">Toghani A, Frijters R, Bozkurt TO, Terauchi R, Kamoun S*, <span class="highlight">Sugihara Y</span>*</span> (2025).
+          <a class="pub-title" href="https://doi.org/10.1111/nph.70391" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Can AI modeling of protein structures distinguish between sensor and helper NLR immune receptors?</a>.
+          <em>New Phytologist</em>. DOI:10.1111/nph.70391
+        </li>
+        <li><span class="authors"><span class="highlight">Sugihara Y</span>, Kourelis J, Contreras MP, Pai H, Harant A, Selvaraj M, Toghani A, Martinez-Anaya C*, Kamoun S*</span> (2025).
+          <a class="pub-title" href="https://doi.org/10.1371/journal.pgen.1011653" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Helper NLR immune protein NRC3 evolved to evade inhibition by a cyst nematode virulence effector</a>.
+          <em>PLOS Genetics</em>, 21:e1011653. DOI:10.1371/journal.pgen.1011653
+        </li>
+        <li><span class="authors">Selvaraj M, Toghani A, Pai H, <span class="highlight">Sugihara Y</span>, Kourelis J, Yuen ELH, Ibrahim T, Zhao H, Xie R, Maqbool A, Concepcion JCD la, Banfield MJ, Derevnina L, Petre B, Lawson DM, Bozkurt TO, Wu C-H, Kamoun S*, Contreras MP*</span> (2024).
+          <a class="pub-title" href="https://doi.org/10.1371/journal.pbio.3002868" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Activation of plant immunity through conversion of a helper NLR homodimer into a resistosome</a>.
+          <em>PLOS Biology</em>, 22:e3002868. DOI:10.1371/journal.pbio.3002868
+        </li>
+        <li><span class="authors">Huang C-Y, Huang Y-S, <span class="highlight">Sugihara Y</span>, Wang H-Y, Huang L-T, Lopez-Agudelo JC, Chen Y-F, Lin K-Y, Chiang B-J, Toghani A, Kourelis J, Wang C-H, Derevnina L, Wu C-H</span> (2024).
+          <a class="pub-title" href="https://doi.org/10.1371/journal.pgen.1011402" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Subfunctionalization of NRC3 altered the genetic structure of the <span class="italic">Nicotiana</span> NRC network</a>.
+          <em>PLOS Genetics</em>, 20:e1011402. DOI:10.1371/journal.pgen.1011402
+        </li>
+        <li><span class="authors">Sugimura Y, Oikawa K, <span class="highlight">Sugihara Y</span>, Utsushi H, Kanzaki E, Ito K, Ogasawara Y, Fujioka T, Takagi H, Shimizu M, Shimono H, Terauchi R, Abe A</span> (2024).
+          <a class="pub-title" href="https://doi.org/10.1371/journal.pgen.1011369" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Impact of rice <span class="italic">GENERAL REGULATORY FACTOR14h</span> (GF14h) on low-temperature seed germination and its application to breeding</a>.
+          <em>PLOS Genetics</em>, 20:e1011369. DOI: 10.1371/journal.pgen.1011369
+        </li>
+        <li><span class="authors">Barragan AC*<sup>+</sup>, Latorre SM<sup>+</sup>, Malmgren A, Harant A, Win J, <span class="highlight">Sugihara Y</span>, Burbano HA, Kamoun S*, Langner T*</span> (2024).
+          <a class="pub-title" href="https://doi.org/10.1093/molbev/msae164" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Multiple horizontal mini-chromosome transfers drive genome evolution of clonal blast fungus lineages</a>.
+          <em>Molecular Biology and Evolution</em>, 41:msae164. DOI: 10.1093/molbev/msae164
+        </li>
+        <li><span class="authors"><span class="highlight">Sugihara Y</span>, Abe Y, Takagi H, Abe A, Shimizu M, Ito K, Kanzaki E, Oikawa K, Kourelis J, Langner T, Win J, Białas A, Lüdke D, Contreras MP, Chuma I, Saitoh H, Kobayashi M, Zheng S, Tosa Y, Banfield MJ, Kamoun S*, Terauchi R*, Fujisaki K*</span> (2023).
+          <a class="pub-title" href="https://doi.org/10.1371/journal.pbio.3001945" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Disentangling the complex gene interaction networks between rice and the blast fungus identifies a new pathogen effector</a>.
+          <em>PLOS Biology</em>, 21:e3001945. DOI: 10.1371/journal.pbio.3001945
+        </li>
+        <li><span class="authors">Nishiyama C, Sekiguchi S, <span class="highlight">Sugihara Y</span>, Nishikawa M, Makita N, Segawa T, Terasaki M, Takagi H, Koyanagi T</span> (2023).
+          <a class="pub-title" href="https://doi.org/10.12938/bmfh.2022-017" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Phylogenomic analysis in <span class="italic">Latilactobacillus sakei</span> by using polymorphisms detected by next-generation sequencing</a>.
+          <em>Bioscience of Microbiota, Food and Health</em>, advpub:2022–017. DOI: 10.12938/bmfh.2022-017
+        </li>
+        <li><span class="authors">Saiga S, Tada M, Segawa T, <span class="highlight">Sugihara Y</span>, Nishikawa M, Makita N, Sakamoto M, Tanaka K, Wada T, Takagi H</span> (2023).
+          <a class="pub-title" href="https://doi.org/10.1007/s10681-022-03132-7" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">NGS-based genome wide association study helps to develop co-dominant marker for the physical map-based locus of PFRU controlling flowering in cultivated octoploid strawberry</a>.
+          <em>Euphytica</em>, 219:6. DOI: 10.1007/s10681-022-03132-7
+        </li>
+        <li><span class="authors">Takeda T*, Takahashi M, Shimizu M, <span class="highlight">Sugihara Y</span>, Saitoh H, Fujisaki K, Ishikawa K, Utsushi H, Kanzaki E, Sakamoto Y, Abe A, Terauchi R*</span> (2022).
+          <a class="pub-title" href="https://doi.org/10.1371/journal.ppat.1010792" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Rice apoplastic CBM1-interacting protein counters blast pathogen invasion by binding conserved carbohydrate binding module 1 motif of fungal proteins</a>.
+          <em>PLOS Pathogens</em>, 18(9): e1010792. DOI: 10.1371/journal.ppat.1010792
+        </li>
+        <li><span class="authors">Natsume S, <span class="highlight">Sugihara Y</span>, Kudoh A, Oikawa K, Shimizu M, Ishikawa Y, Nishihara M, Abe A, Innan H, Terauchi R</span> (2022).
+          <a class="pub-title" href="https://doi.org/10.1093/pcp/pcac109" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Genome Analysis Revives a Forgotten Hybrid Crop Edo-dokoro in the Genus <span class="italic">Dioscorea</span></a>.
+          <em>Plant and Cell Physiology</em>, pcac109. DOI: 10.1093/pcp/pcac109
+        </li>
+        <li><span class="authors">Shimizu M, Hirabuchi A, <span class="highlight">Sugihara Y</span>, Abe A, Takeda T, Kobayashi M, Hiraka Y, Kanzaki E, Oikawa K, Saitoh H, Langner T, Banfield MJ, Kamoun S, Terauchi R</span> (2022).
+          <a class="pub-title" href="https://doi.org/10.1073/pnas.2116896119" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">A genetically linked pair of NLR immune receptors show contrasting patterns of evolution</a>.
+          <em>Proceedings of the National Academy of Sciences</em>, 119(27): e2116896119. DOI: 10.1073/pnas.2116896119
+        </li>
+        <li><span class="authors"><span class="highlight">Sugihara Y</span>, Young L, Yaegashi H, Natsume S, Shea DJ, Takagi H, Booker H, Innan H, Terauchi R, Abe A</span> (2022).
+          <a class="pub-title" href="https://doi.org/10.7717/peerj.13170" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">High-performance pipeline for MutMap and QTL-seq</a>.
+          <em>PeerJ</em>, 10:e13170. DOI: 10.7717/peerj.13170
+        </li>
+        <li><span class="authors"><span class="highlight">Sugihara Y</span><sup>+</sup>, Kudoh A<sup>+</sup>, Tamiru-Oli M, Takagi H, Natsume S, Shimizu M, Abe A, Asiedu R, Asfaw A, Adebola P, Terauchi R</span> (2021).
+          <a class="pub-title" href="https://doi.org/10.1007/13836_2021_94" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Population genomics of yams: evolution and domestication of <span class="italic">Dioscorea</span> species</a>.
+          In: <em>Population Genomics. Springer, Cham</em>. DOI: 10.1007/13836_2021_94
+        </li>
+        <li><span class="authors">Segawa T, Nishiyama C, Tamiru-Oli M, <span class="highlight">Sugihara Y</span>, Abe A, Sone H, Itoh N, Asukai M, Uemura A, Oikawa K, Utsushi H, Ikegami-Katayama A, Imamura T, Mori M, Terauchi R, Takagi H</span> (2021).
+          <a class="pub-title" href="https://doi.org/10.1270/jsbbs.20148" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Sat-BSA: an NGS-based method using local de novo assembly of long reads for rapid identification of genomic structural variations associated with agronomic traits</a>.
+          <em>Breeding Science</em>, 71(3): 299–312. DOI: 10.1270/jsbbs.20148
+        </li>
+        <li><span class="authors"><span class="highlight">Sugihara Y</span>, Darkwa K, Yaegashi H, Natsume S, Shimizu M, Abe A, Hirabuchi A, Ito K, Oikawa K, Tamiru-Oli M, Ohta A, Matsumoto R, Agre P, De Koeyer D, Pachakkil B, Yamanaka S, Muranaka S, Takagi H, White B, Asiedu R, Innan H, Asfaw A*, Adebola P*, Terauchi R*</span> (2020).
+          <a class="pub-title" href="https://doi.org/10.1073/pnas.2015830117" target="_blank" rel="noopener" style="color:var(--brand); font-weight:700; text-decoration:none;">Genome analyses reveal the hybrid origin of the staple food crop white Guinea yam (<span class="italic">Dioscorea rotundata</span>)</a>.
+          <em>Proceedings of the National Academy of Sciences</em>, 17(50): 31987–31992. DOI: 10.1073/pnas.2015830117
+        </li>
+      </ol>
+    </section>
+
+    <!-- Presentations -->
+    <section class="card" style="margin-top:18px;">
+      <h3>Presentations</h3>
+      <ol reversed>
+        <li><span class="authors"><span class="highlight">Sugihara Y</span>, Toghani A, Frijters R, Bozkurt TO, Terauchi R, Kamoun S</span>. Can AI modelling of protein structures distinguish between sensor and helper NLR immune receptors? <span class="venue"><em>2025 IS-MPMI</em>. Cologne, Germany. July 2025.</span></li>
+        <li><span class="authors"><span class="highlight">Sugihara Y</span>, Kourelis J, Contreras MP, Pai H, Selvaraj M, Toghani A, Martinez-Anaya C, Kamoun S</span>. Helper NLR immune protein NRC3 evolved to evade inhibition by a cyst nematode virulence effector. <span class="venue"><em>The 26th Annual Meeting of Society for Evolutionary Studies</em>, Japan. Kanagawa, Japan. Aug. 2024.</span></li>
+        <li><span class="authors"><span class="highlight">Sugihara Y</span>, Białas A, Langner T, Barragan AC, Kourelis J, Abe Y, Fujisaki K, Banfield MJ, Terauchi R, Kamoun S</span>. The NLR immune receptor Pik-1 evolved to respond to fungal effectors of the AVR-Mgk family early in the evolution of <span class="italic">Oryza</span> and prior to rice domestication. <span class="venue"><em>2023 IS-MPMI</em>. Rhode Island, PA. July 2023.</span></li>
+        <li><span class="authors"><span class="highlight">Sugihara Y</span></span>. Genetics approach using whole genome sequencing to rapidly identify the genomic loci involved in biological traits of rice blast fungus. <span class="venue"><em>12th Japan-US Seminar in Plant Pathology</em>. Zoom workshop. October 2020.</span></li>
+        <li><span class="authors"><span class="highlight">Sugihara Y</span>, Natsume S, Abe A, Shimizu M, Obidiegwu J, Terauchi R</span>. Population genomics of <span class="italic">Dioscorea tokoro</span>, a wild yam species. <span class="venue"><em>Plant and Animal Genome (PAG) XXVII Conference</em>. San Diego, CA. January 2019.</span></li>
+        <li><span class="authors"><span class="highlight">Sugihara Y</span>, Abe A, Shimizu M, Yaegashi H, Natsume S, Obidiegwu J, Terauchi R</span>. Application of population genomics and GWAS to <span class="italic">Dioscorea rotundata</span> (white Guinea yams) for identifying loci controlling agronomically important traits. <span class="venue"><em>Plant and Animal Genome (PAG) XXVII Conference</em>. San Diego, CA. January 2019.</span></li>
+      </ol>
+    </section>
+  </main>
 </body>
 </html>
-
-<footer>
-    <p>© 2025 Yu Sugihara</p>
-</footer>
-

@@ -1,97 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Yu Sugihara</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <style>
-        /* Inline styling for consistent heading and text spacing */
-        h2 {
-            font-size: 24px; /* Matches the heading style from index.html */
-            margin-top: 30px;
-            margin-left: 0;
-        }
-        .cv-section {
-            line-height: 1.4; /* Improved line spacing for better readability */
-        }
-        .cv-period {
-            font-weight: bold;
-            color: #4CAF50;
-            margin-right: 30px; /* Adjusted spacing for alignment */
-            display: inline-block;
-            width: 20px; /* Ensures alignment for different period lengths */
-        }
-        .degree {
-            font-weight: bold;
-            color: #555;
-        }
-        .supervisor {
-            font-style: italic;
-            margin-bottom: 15px;
-            display: block;
-            margin-left: 60px;
-        }
-        .download-cv {
-            font-size: 1em;
-            font-weight: normal;
-            color: #4CAF50;
-            text-decoration: none;
-            display: block;
-            margin-top: 50px;
-            text-align: center; /* Centers the link */
-        }
-        .research-period {
-            font-weight: bold;
-            color: #4CAF50;
-            margin-right: 15px; /* Different spacing for research experience */
-            display: inline-block;
-            width: 180px; /* Ensures alignment and prevents line break */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV — Yu Sugihara</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Increase spacing between list items in cards */
+    .card ul > li { margin-bottom: 18px; }
+    .card ul > li:last-child { margin-bottom: 0; }
+    /* Make bold text use brand color */
+    .card strong { color: var(--brand); font-weight: 700; }
+  </style>
 </head>
 <body>
-    <header>
-        <a href="index.html" class="logo">Yu Sugihara</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="publications.html">Publications</a>
-            <a href="cv.html">CV</a>
-        </nav>
-    </header>
+  <header class="site-header">
+    <a class="brand" href="index.html">Yu Sugihara</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html" aria-current="page">CV</a>
+    </nav>
+  </header>
 
-    <div class="wrapper">
-        <main>
-            <section class="cv-section">
-                <h2>Education</h2>
-                <ul>
-                    <li><span class="cv-period">2023</span> <span class="degree">Ph. D</span>, Graduate School of Agriculture, Kyoto University, Japan</li>
-                    <li><span class="cv-period">2020</span> <span class="degree">MSc</span>, Graduate School of Agriculture, Kyoto University, Japan</li>
-                    <li><span class="cv-period">2018</span> <span class="degree">BSc</span>, Department of Agriculture, Kyoto University, Japan</li>
-                </ul>
-                <p class="supervisor">Supervisor: Prof. Ryohei Terauchi</p>
+  <main class="container">
+    <section class="hero" style="grid-template-columns:1fr;">
+      <div>
+        <h1>Curriculum Vitae</h1>
+        <p class="affil">Education, research experience and awards.</p>
+        <div class="chips" style="margin-top:10px;">
+          <a class="chip" href="https://github.com/YuSugihara/YuSugihara.github.io/blob/master/CV/Yu_Sugihara_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        </div>
+      </div>
+    </section>
 
-                <h2>Research Experience</h2>
-                <ul>
-                    <li><span class="research-period">Jan. 2025 – present</span> Team Leader at The Sainsbury Laboratory, UK</li>
-                    <li><span class="research-period">Apr. 2024 – Nov. 2024</span> Postdoc at Iwate Biotechnology Research Center, Japan</li>
-                    <li><span class="research-period">Apr. 2023 – Mar. 2024</span> Postdoc at The Sainsbury Laboratory, UK (Sophien Kamoun group)</li>
-                    <li><span class="research-period">Oct. 2021 – Mar. 2023</span> Internship at The Sainsbury Laboratory, UK (Sophien Kamoun group)</li>
-                    <li><span class="research-period">Apr. 2019 – Sep. 2021</span> Visiting Researcher at Iwate Biotechnology Research Center, Japan</li>
-                </ul>
+    <section class="card" style="margin-top:18px;">
+      <h3>Education</h3>
+      <ul>
+        <li>2023 — <strong>Ph.D.</strong>, Graduate School of Agriculture, Kyoto University, Japan</li>
+        <li>2020 — <strong>M.Sc.</strong>, Graduate School of Agriculture, Kyoto University, Japan</li>
+        <li>2018 — <strong>B.Sc.</strong>, Department of Agriculture, Kyoto University, Japan</li>
+      </ul>
+      <p class="note" style="margin-top:8px; color: var(--text-2, #666);">Supervisor: Prof. Ryohei Terauchi</p>
+    </section>
 
-                <h2>Awards</h2>
-                <ul>
-                    <li>Postdoctoral oral presentation award, <em>The 26th Annual Meeting of Society for Evolutionary Studies</em>, Japan. Aug. 2024</li>
-                </ul>
-            </section>
-            <a href="https://github.com/YuSugihara/YuSugihara.github.io/blob/master/CV/Yu_Sugihara_CV.pdf" target="_blank" class="download-cv">Download CV</a>
-        </main>
-    </div>
+    <section class="card" style="margin-top:18px;">
+      <h3>Research Experience</h3>
+      <ul>
+        <li>Jan. 2025–present — <strong>Team Leader</strong>, The Sainsbury Laboratory, UK</li>
+        <li>Apr. 2024–Nov. 2024 — <strong>Postdoctoral Researcher</strong>, Iwate Biotechnology Research Center, Japan</li>
+        <li>Apr. 2023–Mar. 2024 — <strong>Postdoctoral Researcher</strong>, The Sainsbury Laboratory, UK — Sophien Kamoun group</li>
+        <li>Oct. 2021–Mar. 2023 — <strong>Intern</strong>, The Sainsbury Laboratory, UK — Sophien Kamoun group</li>
+        <li>Apr. 2019–Sep. 2021 — <strong>Visiting Researcher</strong>, Iwate Biotechnology Research Center, Japan</li>
+      </ul>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Yu Sugihara</p>
-    </footer>
+    <section class="card" style="margin-top:18px;">
+      <h3>Awards</h3>
+      <ul>
+        <li>Postdoctoral oral presentation award — <i>The 26th Annual Meeting of Society for Evolutionary Studies</i>, Japan (Aug. 2024)</li>
+      </ul>
+    </section>
+
+  </main>
 </body>
 </html>

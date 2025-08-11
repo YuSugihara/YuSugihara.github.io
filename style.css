@@ -1,150 +1,148 @@
-/* General styling for text and layout */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5; /* Light gray background */
-    color: #333; /* Default text color */
-    margin: 0;
-    padding: 0;
+/* ==========================================
+   Yu Sugihara — Site Styles (LinkedIn-like)
+   Clean light UI, blue accent, subtle borders
+   ========================================== */
+
+:root{
+  /* Layout */
+  --radius: 12px;
+  --shadow: 0 8px 20px rgba(16,24,40,.06);
+  --shadow-press: 0 2px 6px rgba(16,24,40,.06);
+
+  /* Colors (LinkedIn-esque) */
+  --bg:#f3f2ef;           /* page background */
+  --surface:#ffffff;      /* cards / hero */
+  --panel:#ffffff;        /* header backdrop */
+  --text:#1f2329;         /* primary text */
+  --muted:#667085;        /* secondary text */
+  --border:#e6e8eb;       /* soft gray border */
+  --brand:#0a66c2;        /* LinkedIn blue */
+  --brand-weak:rgba(10,102,194,.08);
+  --link:#0a66c2;         /* links */
+  --ring:0 0 0 3px rgba(10,102,194,.25);
 }
 
-/* Wrapper for content to add side padding and fixed width */
-.wrapper {
-    max-width: 800px; /* Narrower content width */
-    margin: 0 auto; /* Centers the content with space on the sides */
-    padding: 20px; /* Adds padding inside the content area */
-    background-color: #fff;
-    box-shadow: none; /* Removes the shadow */
-    border: none; /* Removes the border */
+/* ===== Base ===== */
+*{ box-sizing:border-box }
+html,body{ height:100% }
+body{
+  margin:0;
+  font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background: var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{ max-width:100%; display:block }
+.container{ width:min(960px,92vw); margin-inline:auto; padding:72px 20px 40px }
+
+/* ===== Header ===== */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:12px 18px; background:var(--panel);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:saturate(140%) blur(6px);
+}
+.brand{ text-decoration:none; font-weight:800; letter-spacing:.2px; color:var(--text) }
+.nav a{ text-decoration:none; color:var(--text); margin-left:18px; font-weight:600; opacity:.9 }
+.nav a[aria-current="page"], .nav a:hover{ color:var(--link) }
+
+/* ===== Hero ===== */
+.hero{
+  display:grid; grid-template-columns: 220px 1fr; gap:28px; align-items:center;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:26px;
+  box-shadow:var(--shadow);
+}
+.avatar{
+  width:220px; height:auto; border-radius:12px; object-fit:cover; border:1px solid var(--border);
+}
+.hero h1{ font-size:clamp(28px, 4vw, 40px); margin:0 0 6px }
+.role{ margin:4px 0; font-weight:700; color:var(--brand) }
+.affil{ margin:2px 0; color:var(--muted) }
+.email{ margin:12px 0 18px; color:var(--text) }
+
+/* ===== Chips / Links ===== */
+.chips{ display:flex; flex-wrap:wrap; gap:10px }
+.chip{
+  display:inline-block; text-decoration:none; font-weight:700; color:var(--brand);
+  padding:10px 14px; border-radius:999px;
+  background:var(--brand-weak);
+  border:1px solid color-mix(in oklab, var(--brand) 24%, var(--border));
+  transition: transform .06s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+}
+.chip:hover{ transform:translateY(-1px); box-shadow:var(--shadow-press); background:color-mix(in oklab, var(--brand-weak) 60%, white) }
+.chip:focus{ outline:var(--ring) }
+
+/* ===== Section Cards ===== */
+.cards{ display:grid; grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) ); gap:16px; margin-top:18px }
+.card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:18px 18px 20px; box-shadow:var(--shadow-press) }
+.card h3{ margin:4px 0 10px; font-size:18px }
+.cta{ display:inline-flex; align-items:center; gap:8px; text-decoration:none; font-weight:700; color:var(--link) }
+
+/* ===== Publications page helpers ===== */
+.pub-title{ color:var(--brand); font-weight:700; text-decoration:none }
+.pub-title:hover{ text-decoration:underline }
+.italic{ font-style: italic }
+
+/* ===== Utilities ===== */
+.hidden{ display:none !important }
+.note{ color: var(--muted) }
+
+/* ===== Social icon buttons ===== */
+.social{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:10px;
 }
 
-/* Header section */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #e0e0e0; /* Subtle gray background */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    border-bottom: 1px solid #ccc;
+.btn-icon{
+  --size: 40px;
+  width: var(--size);
+  height: var(--size);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 999px;
+  border:1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-press);
+  text-decoration:none !important;
+  line-height:0;
+  transition: transform .06s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+}
+.btn-icon:hover{
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+  background:#fff;
+  border-color:#dfe3e8;
+}
+.btn-icon:focus-visible{
+  outline: none;
+  box-shadow: var(--shadow), var(--ring);
+}
+.btn-icon img{
+  width:20px;
+  height:20px;
+  display:block;
+  pointer-events:none;
 }
 
-/* Styling for the "Yu Sugihara" link */
-.logo {
-    font-size: 26px;
-    font-weight: bold;
-    color: #4CAF50; /* Custom color for the logo */
-    text-decoration: none;
+/* Keep brand classes (color is set via <img src=".../HEX">) */
+.btn-scholar{} .btn-github{} .btn-orcid{} .btn-x{} .btn-bsky{} .btn-li{} .btn-icon svg{ width:20px; height:20px; display:block; }
+
+/* ===== Responsive ===== */
+@media (max-width: 760px){
+  .hero{ grid-template-columns: 1fr }
+  .avatar{ width:min(68vw, 360px) }
 }
 
-/* Navigation styling */
-nav {
-    margin-left: auto;
-}
-
-nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #4CAF50;
-}
-
-/* General text styling */
-p, li {
-    color: #333; /* Ensures text color is restored */
-    font-size: 16px;
-}
-
-/* Style for profile text section */
-.profile-text {
-    font-size: 16px; /* Matches the standard font size */
-    line-height: 1.2; /* Adjusted line spacing for better readability */
-}
-
-/* Style for ordered lists (Preprints, Publications, Presentations) */
-ol {
-    list-style-type: decimal; /* Ensures numbering */
-    margin-left: 20px; /* Uniform indent size */
-}
-
-ol li {
-    line-height: 1.4; /* Tighter line spacing within a single item */
-    margin-bottom: 20px; /* Space between numbered items */
-}
-
-/* Style for unnumbered lists (CV) */
-ul {
-    list-style-type: none; /* No bullet points */
-    margin-left: 20px; /* Adds space from the left */
-}
-
-ul li {
-    margin-bottom: 15px; /* Reduces space between CV items */
-    line-height: 1.6; /* Default line spacing */
-}
-
-/* Style for the profile image */
-.profile-image {
-    max-width: 240px;
-    margin-right: 30px;
-}
-
-/* Style for the content next to the image */
-.content {
-    flex: 1;
-}
-
-/* Style for inline link display, left-aligned */
-.links {
-    margin-top: 20px;
-    text-align: left;
-}
-
-.links a {
-    color: #4CAF50;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.links a:hover {
-    text-decoration: underline;
-}
-
-/* Footer styling */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f5f5f5; /* Matches the background space color */
-    border-top: none; /* Removes the line above the footer */
-}
-
-footer p {
-    margin: 0;
-    color: #333;
-}
-
-/* Heading styling to match CV and Publications */
-h2 {
-    font-size: 24px;
-    margin-top: 30px;
-    margin-left: 0; /* Aligns headings consistently */
-}
-
-/* Responsive layout for smaller screens */
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .links {
-        text-align: center;
-    }
-    .profile-image {
-        margin: 0 auto 20px;
-    }
+/* Motion accessibility: Remove transitions for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .btn-icon{ transition:none }
 }
