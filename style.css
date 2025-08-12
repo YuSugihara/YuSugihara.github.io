@@ -216,9 +216,13 @@ img{ max-width:100%; display:block }
 
 .site-footer {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 16px;
   margin-top: 40px;
   font-size: 0.9rem;
-  color: var(--text-secondary);
-  border-top: 1px solid var(--border-color);
+  color: var(--muted);
+  border-top: none;
 }
+.site-footer p { margin: 0; }
