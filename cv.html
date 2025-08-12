@@ -8,16 +8,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Page-specific light tweaks */
-    .hero.cv { grid-template-columns: 150px 1fr; align-items: center; }
-    .hero.cv .avatar{ width:150px; border-radius:12px }
-    .hero.cv .role{ margin-top:6px }
-    .subnote{ color: var(--muted); font-size:.95em }
-    .card ul>li{ margin-bottom: 14px }
-    .card ul>li:last-child{ margin-bottom: 0 }
-    .cv-download{ margin-top: 28px; text-align:center; font-size:.95em }
-    .cv-download a{ text-decoration:none; color:var(--link); font-weight:600 }
-    .cv-download a:hover{ text-decoration:underline }
+    /* Responsive adjustments */
+    .hero.cv { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+    .hero.cv .avatar { width: 150px; max-width: 100%; border-radius: 12px; flex-shrink: 0; }
+    .hero.cv div { flex: 1 1 200px; }
+    .hero.cv .role { margin-top: 6px; }
+    .subnote { color: var(--muted); font-size: .95em; }
+    .card ul>li { margin-bottom: 14px; }
+    .card ul>li:last-child { margin-bottom: 0; }
+    .cv-download { margin-top: 28px; text-align: center; font-size: .95em; }
+    .cv-download a { text-decoration: none; color: var(--link); font-weight: 600; }
+    .cv-download a:hover { text-decoration: underline; }
+      /* Responsive fixes for mobile */
+    .hero.cv > div{ min-width: 0; }
+    .hero.cv .email{ overflow-wrap:anywhere; word-break: break-word; }
+    .hero.cv{ gap:20px; align-items:flex-start; }
+
+    @media (max-width: 720px){
+      .hero.cv{ grid-template-columns: 1fr; padding:20px; }
+      .hero.cv .avatar{ width:min(42vw, 140px); margin-bottom:8px; }
+    }
   </style>
 </head>
 <body>
@@ -36,7 +46,7 @@
       <img class="avatar" src="images/y-sugihara.jpg" alt="Portrait of Yu Sugihara">
       <div>
         <h1>Yu Sugihara</h1>
-        <p class="role">Team Leader</p>
+        <p class="role">Team Leader — Plant Immunity & Computational Biology</p>
         <p class="affil">The Sainsbury Laboratory, Norwich, UK</p>
         <p class="email">yu.sugihara@tsl.ac.uk</p>
         <p class="subnote">Research focus: crop evolution, plant–pathogen interactions, NLR immune receptors.</p>
@@ -74,7 +84,17 @@
       </ul>
     </section>
 
-    <!-- Small download link at bottom -->
+    <!-- Skills / Tools -->
+    <section class="card" style="margin-top:18px;">
+      <h3>Skills & Tools</h3>
+      <ul>
+        <li>Computational: Python, R, structural modeling (AlphaFold family), large-scale sequence analysis</li>
+        <li>Wet lab: Plant transformation, protein assays, pathogen challenges</li>
+        <li>Other: Figure/visualization, collaborative workflows (GitHub, CI)</li>
+      </ul>
+    </section>
+
+    <!-- Download link -->
     <p class="cv-download">
       <a href="https://github.com/YuSugihara/YuSugihara.github.io/blob/master/CV/Yu_Sugihara_CV.pdf" target="_blank" rel="noopener">Download full CV (PDF)</a>
     </p>
