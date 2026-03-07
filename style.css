@@ -63,6 +63,7 @@ img{ max-width:100%; display:block }
   letter-spacing:.2px;
   color:var(--text);
   padding:6px 10px;
+  white-space:nowrap;
 }
 
 .nav{ display:flex; align-items:center; gap:8px; }
@@ -92,21 +93,7 @@ img{ max-width:100%; display:block }
   border-radius:var(--radius-soft);
   padding:28px;
   box-shadow:var(--shadow);
-  position:relative;
-  overflow:hidden;
 }
-.hero::before{
-  content:"";
-  position:absolute;
-  width:280px;
-  height:280px;
-  right:-90px;
-  top:-130px;
-  border-radius:50%;
-  background:radial-gradient(circle, rgba(10,102,194,.16) 0%, rgba(10,102,194,0) 70%);
-  pointer-events:none;
-}
-.hero > *{ position:relative; }
 
 .avatar{
   width:220px;
@@ -300,9 +287,10 @@ img{ max-width:100%; display:block }
     border-radius:18px;
     padding:9px 10px;
     gap:8px;
+    flex-wrap:wrap;
   }
-  .brand{ padding:4px 8px; font-size:15px; }
-  .nav{ width:100%; overflow-x:auto; padding:2px; gap:6px; }
+  .brand{ padding:4px 8px; font-size:15px; flex:0 0 auto; }
+  .nav{ width:100%; flex:1 1 100%; overflow-x:auto; padding:2px; gap:6px; }
   .nav a{ white-space:nowrap; padding:7px 10px; font-size:14px; }
   .hero{ grid-template-columns:1fr; gap:18px; padding:18px; border-radius:16px; }
   .avatar{ width:min(68vw, 280px); }
