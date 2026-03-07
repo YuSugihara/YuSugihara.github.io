@@ -55,6 +55,13 @@ img{ max-width:100%; display:block }
   border-radius:999px;
   box-shadow:0 10px 24px rgba(16,24,40,.08);
   backdrop-filter:saturate(140%) blur(10px);
+  transition:transform .28s ease, opacity .2s ease;
+}
+
+body.hide-sticky-header .site-header{
+  transform:translateY(calc(-100% - 18px));
+  opacity:0;
+  pointer-events:none;
 }
 
 .brand{

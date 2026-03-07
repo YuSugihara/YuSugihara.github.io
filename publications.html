@@ -39,7 +39,7 @@
       </div>
 
     <!-- Preprints -->
-    <section class="card section-block">
+    <section id="preprints-section" class="card section-block">
       <h3>Preprints</h3>
       <ol reversed>
         <li><span class="authors">Jeong HM, <span class="highlight">Sugihara Y</span>, Webster MW, Carella P</span> (2025).
@@ -168,9 +168,22 @@
         const currentYear = new Date().getFullYear();
         if (Number.isFinite(launchYear) && launchYear > 1900 && launchYear <= currentYear) {
           yearEl.textContent = launchYear === currentYear ? String(currentYear) : `${launchYear}-${currentYear}`;
-          return;
+        } else {
+          yearEl.textContent = String(currentYear);
         }
-        yearEl.textContent = String(currentYear);
+
+        const header = document.querySelector('.site-header');
+        const preprintsSection = document.getElementById('preprints-section');
+        if (!header || !preprintsSection) return;
+
+        const toggleHeader = () => {
+          const triggerY = preprintsSection.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 8;
+          document.body.classList.toggle('hide-sticky-header', window.scrollY >= triggerY);
+        };
+
+        toggleHeader();
+        window.addEventListener('scroll', toggleHeader, { passive: true });
+        window.addEventListener('resize', toggleHeader);
       })();
     </script>
 
