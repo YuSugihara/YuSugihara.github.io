@@ -52,6 +52,7 @@
             </svg>
           </a>
         </div>
+      </div>
     </section>
     <section class="tweet-section">
       <h2>Recent Papers</h2>
@@ -75,11 +76,21 @@
     </section>
 
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Yu Sugihara</p>
+      <p>&copy; <span id="year" data-launch-year="2021"></span> Yu Sugihara</p>
     </footer>
 
     <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
+      (function () {
+        const yearEl = document.getElementById('year');
+        if (!yearEl) return;
+        const launchYear = Number(yearEl.dataset.launchYear);
+        const currentYear = new Date().getFullYear();
+        if (Number.isFinite(launchYear) && launchYear > 1900 && launchYear <= currentYear) {
+          yearEl.textContent = launchYear === currentYear ? String(currentYear) : `${launchYear}-${currentYear}`;
+          return;
+        }
+        yearEl.textContent = String(currentYear);
+      })();
     </script>
   
   </main>

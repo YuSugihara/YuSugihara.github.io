@@ -54,7 +54,7 @@
     </section>
 
     <!-- Education -->
-    <section class="card" style="margin-top:18px;">
+    <section class="card section-block">
       <h3>Education</h3>
       <ul>
         <li>2023 — <strong>Ph.D.</strong>, Graduate School of Agriculture, Kyoto University, Japan</li>
@@ -65,7 +65,7 @@
     </section>
 
     <!-- Research Experience -->
-    <section class="card" style="margin-top:18px;">
+    <section class="card section-block">
       <h3>Research Experience</h3>
       <ul>
         <li><strong>Team Leader</strong>, The Sainsbury Laboratory, UK — Jan. 2025–present</li>
@@ -77,7 +77,7 @@
     </section>
 
     <!-- Awards -->
-    <section class="card" style="margin-top:18px;">
+    <section class="card section-block">
       <h3>Awards</h3>
       <ul>
         <li>Postdoctoral oral presentation award — <i>The 26th Annual Meeting of Society for Evolutionary Studies</i>, Japan (Aug. 2024)</li>
@@ -90,11 +90,21 @@
     </p>
 
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Yu Sugihara</p>
+      <p>&copy; <span id="year" data-launch-year="2021"></span> Yu Sugihara</p>
     </footer>
 
     <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
+      (function () {
+        const yearEl = document.getElementById('year');
+        if (!yearEl) return;
+        const launchYear = Number(yearEl.dataset.launchYear);
+        const currentYear = new Date().getFullYear();
+        if (Number.isFinite(launchYear) && launchYear > 1900 && launchYear <= currentYear) {
+          yearEl.textContent = launchYear === currentYear ? String(currentYear) : `${launchYear}-${currentYear}`;
+          return;
+        }
+        yearEl.textContent = String(currentYear);
+      })();
     </script>
     
   </main>
