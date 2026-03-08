@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body data-header-hide-at="28">
   <header class="site-header">
     <a class="brand" href="index.html">Yu Sugihara</a>
     <nav class="nav">
@@ -94,10 +94,14 @@
 
         const header = document.querySelector('.site-header');
         const triggerEl = document.querySelector('[data-hide-header-trigger]');
-        if (!header || !triggerEl) return;
+        const hideAt = Number(document.body.dataset.headerHideAt);
+        if (!header) return;
+        if (!Number.isFinite(hideAt) && !triggerEl) return;
 
         const toggleHeader = () => {
-          const triggerY = triggerEl.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 8;
+          const triggerY = Number.isFinite(hideAt)
+            ? hideAt
+            : (triggerEl.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 8);
           document.body.classList.toggle('hide-sticky-header', window.scrollY >= triggerY);
         };
 
