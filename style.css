@@ -111,7 +111,7 @@ body.hide-sticky-header .site-header{
 }
 
 .hero h1{
-  font-size:clamp(30px, 4vw, 42px);
+  font-size:clamp(26px, 3.2vw, 34px);
   margin:0 0 8px;
   line-height:1.1;
 }

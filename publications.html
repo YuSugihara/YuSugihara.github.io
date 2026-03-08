@@ -39,7 +39,7 @@
       </div>
 
     <!-- Preprints -->
-    <section id="preprints-section" class="card section-block">
+    <section id="preprints-section" class="card section-block" data-hide-header-trigger>
       <h3>Preprints</h3>
       <ol reversed>
         <li><span class="authors">Jeong HM, <span class="highlight">Sugihara Y</span>, Webster MW, Carella P</span> (2025).
@@ -163,21 +163,22 @@
     <script>
       (function () {
         const yearEl = document.getElementById('year');
-        if (!yearEl) return;
-        const launchYear = Number(yearEl.dataset.launchYear);
-        const currentYear = new Date().getFullYear();
-        if (Number.isFinite(launchYear) && launchYear > 1900 && launchYear <= currentYear) {
-          yearEl.textContent = launchYear === currentYear ? String(currentYear) : `${launchYear}-${currentYear}`;
-        } else {
-          yearEl.textContent = String(currentYear);
+        if (yearEl) {
+          const launchYear = Number(yearEl.dataset.launchYear);
+          const currentYear = new Date().getFullYear();
+          if (Number.isFinite(launchYear) && launchYear > 1900 && launchYear <= currentYear) {
+            yearEl.textContent = launchYear === currentYear ? String(currentYear) : `${launchYear}-${currentYear}`;
+          } else {
+            yearEl.textContent = String(currentYear);
+          }
         }
 
         const header = document.querySelector('.site-header');
-        const preprintsSection = document.getElementById('preprints-section');
-        if (!header || !preprintsSection) return;
+        const triggerEl = document.querySelector('[data-hide-header-trigger]');
+        if (!header || !triggerEl) return;
 
         const toggleHeader = () => {
-          const triggerY = preprintsSection.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 8;
+          const triggerY = triggerEl.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 8;
           document.body.classList.toggle('hide-sticky-header', window.scrollY >= triggerY);
         };
 

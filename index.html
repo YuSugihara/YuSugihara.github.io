@@ -54,7 +54,7 @@
         </div>
       </div>
     </section>
-    <section class="tweet-section">
+    <section class="tweet-section" data-hide-header-trigger>
       <h2>Recent Papers</h2>
       <div class="tweet-pins">
         <div class="tweet-pin">
@@ -82,14 +82,28 @@
     <script>
       (function () {
         const yearEl = document.getElementById('year');
-        if (!yearEl) return;
-        const launchYear = Number(yearEl.dataset.launchYear);
-        const currentYear = new Date().getFullYear();
-        if (Number.isFinite(launchYear) && launchYear > 1900 && launchYear <= currentYear) {
-          yearEl.textContent = launchYear === currentYear ? String(currentYear) : `${launchYear}-${currentYear}`;
-          return;
+        if (yearEl) {
+          const launchYear = Number(yearEl.dataset.launchYear);
+          const currentYear = new Date().getFullYear();
+          if (Number.isFinite(launchYear) && launchYear > 1900 && launchYear <= currentYear) {
+            yearEl.textContent = launchYear === currentYear ? String(currentYear) : `${launchYear}-${currentYear}`;
+          } else {
+            yearEl.textContent = String(currentYear);
+          }
         }
-        yearEl.textContent = String(currentYear);
+
+        const header = document.querySelector('.site-header');
+        const triggerEl = document.querySelector('[data-hide-header-trigger]');
+        if (!header || !triggerEl) return;
+
+        const toggleHeader = () => {
+          const triggerY = triggerEl.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 8;
+          document.body.classList.toggle('hide-sticky-header', window.scrollY >= triggerY);
+        };
+
+        toggleHeader();
+        window.addEventListener('scroll', toggleHeader, { passive: true });
+        window.addEventListener('resize', toggleHeader);
       })();
     </script>
   
