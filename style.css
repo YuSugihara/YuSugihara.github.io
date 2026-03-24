@@ -214,6 +214,30 @@ body.hide-sticky-header .site-header{
   text-decoration:underline;
 }
 
+.page-home .tweet-section{
+  margin-top:34px;
+  padding:clamp(16px, 2.2vw, 24px);
+  background:linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(248,251,255,.92) 100%);
+  border:1px solid #d8e2ee;
+  border-radius:18px;
+  box-shadow:0 12px 28px rgba(15,23,42,.08);
+}
+
+.page-home .tweet-section h2{
+  margin:0 0 12px;
+}
+
+.page-home .tweet-pins{
+  gap:14px;
+}
+
+.page-home .tweet-pin{
+  background:transparent;
+  border:none;
+  box-shadow:none;
+  padding:0;
+}
+
 .affiliation,
 .affil{
   margin:0;
