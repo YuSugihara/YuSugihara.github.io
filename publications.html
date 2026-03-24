@@ -7,20 +7,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Page-specific tweaks */
-    .card ol > li { margin: 0 0 22px 0; }
-    .card ol > li:last-child { margin-bottom: 0; }
-
-    /* My name: bold + underline, not brand color */
-    .highlight { color: inherit; font-weight: 700; text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 2px; }
-    .card .authors .highlight { color: inherit !important; font-weight: 700; text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 2px; }
-
-    /* Journal names (the strong right after the title link) should be italic */
-    .pub-title + strong { font-style: italic; }
-  </style>
 </head>
-<body>
+<body class="page-publications">
   <header class="site-header">
     <a class="brand" href="index.html">Yu Sugihara</a>
     <nav class="nav">
@@ -33,7 +21,7 @@
   <main class="container">
     <!-- Page header card -->
       <div>
-        <div class="chips" style="margin-top:10px;">
+        <div class="chips">
           <a class="chip" href="https://scholar.google.com/citations?user=9Oa_0ScAAAAJ&hl=en" target="_blank" rel="noopener">View on Google Scholar</a>
         </div>
       </div>
@@ -64,7 +52,7 @@
     <!-- Publications -->
     <section class="card section-block">
       <h3>Publications</h3>
-      <p class="note" style="margin-top:10px; font-size:0.95em; color: var(--text-2, #666);">* Corresponding authors、+ Authors contributed equally</p>
+      <p class="note">* Corresponding authors、+ Authors contributed equally</p>
       <ol reversed>
         <li><span class="authors">Toghani A, Frijters R, Bozkurt TO, Terauchi R, Kamoun S*, <span class="highlight">Sugihara Y</span>*</span> (2025).
           <a class="pub-title" href="https://doi.org/10.1111/nph.70391" target="_blank" rel="noopener">Can AI modeling of protein structures distinguish between sensor and helper NLR immune receptors?</a>.
