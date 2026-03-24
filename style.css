@@ -177,6 +177,43 @@ body.hide-sticky-header .site-header{
   display:none;
 }
 
+.page-home .hero h1{
+  font-size:clamp(1.82rem, 3.5vw, 2.5rem);
+  line-height:1.04;
+}
+
+.page-home .affiliation{
+  color:#42596f;
+  font-size:clamp(1.02rem, 1.65vw, 1.24rem);
+  line-height:1.35;
+}
+
+.page-home .email{
+  margin-top:9px;
+  color:#304560;
+  font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size:clamp(1rem, 1.35vw, 1.08rem);
+}
+
+.page-home .scholar-link{
+  margin:10px 0 0;
+}
+
+.page-home .scholar-link a{
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  color:#115a9b;
+  font-weight:700;
+  text-decoration:none;
+  letter-spacing:.01em;
+}
+
+.page-home .scholar-link a:hover{
+  color:#0a4a85;
+  text-decoration:underline;
+}
+
 .affiliation,
 .affil{
   margin:0;
@@ -512,286 +549,6 @@ body.hide-sticky-header .site-header{
 
   .page-publications .card ol{ padding-left:1.16rem; }
   .page-publications .card ol > li{ margin-bottom:.96rem; padding-bottom:.92rem; }
-}
-
-/* Home Page Redesign */
-.page-home{
-  --home-ink:#101b2b;
-  --home-muted:#42596f;
-  --home-border:rgba(182,199,220,.92);
-  --home-card-bg:rgba(255,255,255,.84);
-  --home-shadow:0 22px 44px rgba(11,28,49,.16);
-  background:
-    linear-gradient(180deg, rgba(247,251,255,.9) 0%, rgba(244,249,254,.92) 100%),
-    radial-gradient(900px 420px at 84% 8%, rgba(31,94,154,.14), transparent 62%);
-  background-size:auto, auto;
-  background-position:center, center;
-  background-repeat:no-repeat, no-repeat;
-  background-attachment:fixed, fixed;
-  color:var(--home-ink);
-}
-
-.page-home .site-header{
-  width:min(1120px, calc(100% - 24px));
-  background:rgba(255,255,255,.94);
-  border-color:rgba(185,203,223,.9);
-  box-shadow:0 10px 22px rgba(16,34,58,.08);
-}
-
-.page-home .container{
-  width:min(1120px, 94vw);
-  padding:84px 0 42px;
-}
-
-.page-home .home-hero{
-  margin-top:10px;
-}
-
-.page-home .home-hero-card{
-  position:relative;
-  overflow:hidden;
-  display:grid;
-  grid-template-columns:minmax(0, 1.15fr) minmax(0, .95fr);
-  gap:clamp(16px, 2.6vw, 36px);
-  align-items:center;
-  padding:clamp(24px, 3.2vw, 40px);
-  border:1px solid var(--home-border);
-  border-radius:24px;
-  background:var(--home-card-bg);
-  box-shadow:var(--home-shadow);
-  backdrop-filter:saturate(125%) blur(5px);
-}
-
-.page-home .home-hero-card::after{
-  content:"";
-  position:absolute;
-  inset:-1px;
-  pointer-events:none;
-  clip-path:polygon(56% 0, 100% 0, 100% 100%, 36% 100%);
-  background:
-    linear-gradient(118deg, transparent 24%, rgba(49,111,177,.14) 72%, rgba(49,111,177,.22) 100%),
-    url("images/phylogeny.png");
-  background-size:auto, 175%;
-  background-position:center, 8% 44%;
-  opacity:.26;
-}
-
-.page-home .home-profile,
-.page-home .home-meta{
-  position:relative;
-  z-index:1;
-}
-
-.page-home .home-profile{
-  display:flex;
-  align-items:center;
-  gap:1.1rem;
-  min-width:0;
-}
-
-.page-home .home-identity{
-  min-width:0;
-}
-
-.page-home .home-avatar{
-  width:118px;
-  height:118px;
-  border-radius:50%;
-  object-fit:cover;
-  border:3px solid #fff;
-  box-shadow:0 8px 22px rgba(13,28,47,.22);
-  flex:0 0 auto;
-}
-
-.page-home .home-name{
-  margin:0;
-  font-size:clamp(2.15rem, 4.9vw, 3.5rem);
-  line-height:.94;
-  letter-spacing:-.035em;
-  color:#0c1a2b;
-  white-space:nowrap;
-}
-
-.page-home .home-fields{
-  display:inline-flex;
-  align-items:center;
-  width:fit-content;
-  margin:.5rem 0 0;
-  padding:.34rem .78rem;
-  border-radius:999px;
-  color:#1e5e97;
-  background:rgba(30,94,151,.11);
-  font-weight:700;
-  font-size:.84rem;
-  letter-spacing:.02em;
-}
-
-.page-home .home-meta{
-  display:grid;
-  gap:.58rem;
-}
-
-.page-home .home-meta .affiliation{
-  margin:0;
-  color:var(--home-muted);
-  font-size:clamp(1.12rem, 2.1vw, 1.45rem);
-  line-height:1.35;
-}
-
-.page-home .home-meta .email{
-  margin:0;
-  color:#304560;
-  font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  font-size:clamp(1rem, 1.4vw, 1.08rem);
-  overflow-wrap:anywhere;
-}
-
-.page-home .home-scholar{
-  margin:0;
-}
-
-.page-home .home-scholar a{
-  display:inline-flex;
-  align-items:center;
-  gap:.35rem;
-  color:#115a9b;
-  text-decoration:none;
-  font-weight:700;
-  letter-spacing:.01em;
-}
-
-.page-home .home-scholar a:hover{
-  color:#0a4a85;
-  text-decoration:underline;
-}
-
-.page-home .home-meta .social{
-  margin-top:.32rem;
-  gap:.56rem;
-}
-
-.page-home .home-meta .btn-icon{
-  width:40px;
-  height:40px;
-  border-radius:10px;
-  border:1px solid rgba(196,212,231,.9);
-  box-shadow:0 4px 12px rgba(15,33,54,.08);
-  background:rgba(255,255,255,.96);
-}
-
-.page-home .home-meta .btn-icon:hover{
-  transform:translateY(-1px);
-  box-shadow:0 8px 16px rgba(15,33,54,.16);
-  border-color:rgba(169,191,215,.95);
-}
-
-.page-home .home-meta .btn-icon img,
-.page-home .home-meta .btn-icon svg{
-  width:20px;
-  height:20px;
-}
-
-.page-home .tweet-section{
-  margin-top:2rem;
-  padding:clamp(1.05rem, 2.2vw, 1.45rem);
-  background:rgba(255,255,255,.86);
-  border:1px solid rgba(193,209,229,.86);
-  border-radius:18px;
-  box-shadow:0 12px 28px rgba(15,34,58,.1);
-  backdrop-filter:blur(3px);
-}
-
-.page-home .tweet-section h2{
-  margin:0 0 1rem;
-  letter-spacing:-.01em;
-  color:#182638;
-}
-
-.page-home .tweet-pins{
-  gap:.9rem;
-}
-
-.page-home .tweet-pin{
-  border-color:rgba(199,214,232,.95);
-}
-
-.page-home .site-footer{
-  margin-top:2rem;
-  color:#607088;
-}
-
-@media (max-width: 1100px){
-  .page-home .home-hero-card{
-    grid-template-columns:minmax(0, 1.1fr) minmax(0, 1fr);
-    gap:1rem 1.4rem;
-  }
-
-  .page-home .home-avatar{
-    width:104px;
-    height:104px;
-  }
-}
-
-@media (max-width: 920px){
-  .page-home{
-    background-attachment:scroll, scroll;
-    background-position:center, center;
-  }
-
-  .page-home .home-hero-card{
-    grid-template-columns:1fr;
-    gap:.9rem;
-    padding:1.22rem;
-  }
-
-  .page-home .home-hero-card::after{
-    clip-path:none;
-    opacity:.12;
-    background-size:auto, cover;
-    background-position:center, center;
-  }
-
-  .page-home .home-meta .affiliation{
-    font-size:clamp(1.06rem, 2.7vw, 1.24rem);
-  }
-
-  .page-home .home-name{
-    white-space:normal;
-  }
-}
-
-@media (max-width: 760px){
-  .page-home .site-header{
-    width:calc(100% - 12px);
-  }
-
-  .page-home .container{
-    width:94vw;
-    padding:74px 0 30px;
-  }
-
-  .page-home .home-profile{
-    align-items:flex-start;
-    gap:.82rem;
-  }
-
-  .page-home .home-avatar{
-    width:88px;
-    height:88px;
-  }
-
-  .page-home .home-name{
-    font-size:clamp(1.95rem, 10vw, 2.5rem);
-  }
-
-  .page-home .home-meta .social{
-    gap:.46rem;
-  }
-
-  .page-home .home-meta .btn-icon{
-    width:38px;
-    height:38px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce){
