@@ -361,11 +361,6 @@ body.hide-sticky-header .site-header{
   display:inline;
 }
 
-.page-publications .pub-title::before{
-  content:"";
-  display:block;
-}
-
 .page-publications .card ol > li{
   margin:0 0 1.12rem;
   padding-bottom:1.08rem;
