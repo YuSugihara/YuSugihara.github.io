@@ -205,12 +205,16 @@ body.hide-sticky-header .site-header{
   gap:.35rem;
   color:#115a9b;
   font-weight:700;
-  text-decoration:none;
+  text-decoration:underline;
+  text-decoration-color:rgba(17,90,155,.45);
+  text-decoration-thickness:.08em;
+  text-underline-offset:.14em;
   letter-spacing:.01em;
 }
 
 .page-home .scholar-link a:hover{
   color:#0a4a85;
+  text-decoration-color:currentColor;
   text-decoration:underline;
 }
 
