@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yu Sugihara</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-home {
+      --home-bg-0: #f5f7fa;
+      --home-bg-1: #edf2f8;
+      --home-ink: #0f1824;
+      --home-muted: #4f5d72;
+      --home-line: #d7dfec;
+      --home-card: rgba(255, 255, 255, 0.9);
+      --home-accent: #234d84;
+      --home-accent-2: #2f6db8;
+      --home-shadow: 0 18px 42px rgba(18, 37, 63, 0.12);
+      background:
+        radial-gradient(1200px 600px at 95% -5%, rgba(47, 109, 184, 0.12), transparent 65%),
+        linear-gradient(180deg, var(--home-bg-0), var(--home-bg-1));
+      color: var(--home-ink);
+    }
+
+    .page-home .container {
+      max-width: 1180px;
+      padding: 2.25rem 1.1rem 3rem;
+    }
+
+    .page-home .hero {
+      display: grid;
+      grid-template-columns: minmax(320px, 1fr) minmax(320px, 1.08fr);
+      gap: 2rem;
+      align-items: stretch;
+      margin-top: 0.75rem;
+    }
+
+    .page-home .hero-main,
+    .page-home .hero-visual {
+      background: var(--home-card);
+      border: 1px solid var(--home-line);
+      border-radius: 22px;
+      box-shadow: var(--home-shadow);
+      backdrop-filter: blur(3px);
+    }
+
+    .page-home .hero-main {
+      padding: clamp(1.15rem, 2.2vw, 1.8rem);
+    }
+
+    .page-home .profile-head {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .page-home .avatar {
+      width: 98px;
+      height: 98px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffffff;
+      box-shadow: 0 8px 20px rgba(15, 24, 36, 0.2);
+      flex: 0 0 auto;
+    }
+
+    .page-home h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 2.55rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: #0d1622;
+    }
+
+    .page-home .fields {
+      margin: 0.38rem 0 0;
+      color: var(--home-accent);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .page-home .affiliation,
+    .page-home .email {
+      margin: 0.7rem 0 0;
+      color: var(--home-muted);
+      font-size: 1.02rem;
+    }
+
+    .page-home .email {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      font-size: 0.98rem;
+      color: #34465f;
+    }
+
+    .page-home .key-links {
+      display: flex;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+      margin: 1.1rem 0 1.05rem;
+    }
+
+    .page-home .key-links a {
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(135deg, var(--home-accent), var(--home-accent-2));
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 0.42rem 0.82rem;
+      font-size: 0.86rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    }
+
+    .page-home .key-links a:hover,
+    .page-home .key-links a:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 16px rgba(35, 77, 132, 0.25);
+      opacity: 0.95;
+    }
+
+    .page-home .social {
+      margin-top: 0.4rem;
+      display: flex;
+      gap: 0.48rem;
+      flex-wrap: wrap;
+    }
+
+    .page-home .btn-icon {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--home-line);
+      background: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .page-home .btn-icon:hover,
+    .page-home .btn-icon:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 12px rgba(16, 36, 62, 0.16);
+    }
+
+    .page-home .btn-icon img,
+    .page-home .btn-icon svg {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+
+    .page-home .hero-visual {
+      padding: 0.95rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      justify-content: center;
+    }
+
+    .page-home .phylogeny-frame {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #cfd8e7;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+      background: #f1f4f9;
+      aspect-ratio: 16 / 10;
+    }
+
+    .page-home .phylogeny-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(16, 24, 37, 0.03), rgba(16, 24, 37, 0.12));
+      pointer-events: none;
+    }
+
+    .page-home .phylogeny-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .page-home .visual-caption {
+      margin: 0.05rem 0 0;
+      color: #5b6980;
+      font-size: 0.88rem;
+      text-align: right;
+    }
+
+    .page-home .tweet-section {
+      margin-top: 2.3rem;
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid var(--home-line);
+      border-radius: 18px;
+      box-shadow: 0 12px 28px rgba(15, 34, 58, 0.08);
+      padding: clamp(1rem, 2vw, 1.35rem);
+    }
+
+    .page-home .tweet-section h2 {
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+      font-size: clamp(1.25rem, 2.3vw, 1.55rem);
+      color: #182638;
+    }
+
+    .page-home .tweet-pins {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .page-home .tweet-pin {
+      min-width: 0;
+    }
+
+    .page-home .site-footer {
+      margin-top: 2.2rem;
+      color: #607088;
+    }
+
+    @media (max-width: 980px) {
+      .page-home .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .page-home .hero-main {
+        order: 1;
+      }
+
+      .page-home .hero-visual {
+        order: 2;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page-home .container {
+        padding-top: 1.5rem;
+      }
+
+      .page-home .profile-head {
+        align-items: flex-start;
+      }
+
+      .page-home .tweet-pins {
+        grid-template-columns: 1fr;
+      }
+
+      .page-home .visual-caption {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body class="page-home" data-header-hide-at="28">
+  <header class="site-header">
+    <a class="brand" href="index.html">Yu Sugihara</a>
+    <nav class="nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-main">
+        <div class="profile-head">
+          <img class="avatar" src="images/y-sugihara.jpg" alt="Portrait of Yu Sugihara">
+          <div>
+            <h1>Yu Sugihara</h1>
+            <p class="fields">Evolution • Computational Biology</p>
+          </div>
+        </div>
+        <p class="affiliation">Team Leader, The Sainsbury Laboratory, Norwich, UK</p>
+        <p class="email">yu.sugihara@tsl.ac.uk</p>
+        <div class="key-links" aria-label="Important external links">
+          <a href="https://scholar.google.co.jp/citations?user=9Oa_0ScAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="publications.html">Publications</a>
+          <a href="cv.html">Curriculum Vitae</a>
+        </div>
+        <div class="social" aria-label="Social links">
+          <a class="btn-icon" href="https://scholar.google.co.jp/citations?user=9Oa_0ScAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+            <img alt="" src="https://cdn.simpleicons.org/googlescholar/4285F4" />
+          </a>
+          <a class="btn-icon" href="https://github.com/YuSugihara" target="_blank" rel="noopener" aria-label="GitHub">
+            <img alt="" src="https://cdn.simpleicons.org/github/181717" />
+          </a>
+          <a class="btn-icon" href="https://orcid.org/0000-0001-6042-1091" target="_blank" rel="noopener" aria-label="ORCID">
+            <img alt="" src="https://cdn.simpleicons.org/orcid/A6CE39" />
+          </a>
+          <a class="btn-icon" href="https://twitter.com/YuSugiharaY" target="_blank" rel="noopener" aria-label="X">
+            <img alt="" src="https://cdn.simpleicons.org/x/000000" />
+          </a>
+          <a class="btn-icon" href="https://bsky.app/profile/yusugihara.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky">
+            <img alt="" src="https://cdn.simpleicons.org/bluesky/0866FF" />
+          </a>
+          <a class="btn-icon btn-li"
+            href="https://www.linkedin.com/in/yu-sugihara-005724234/"
+            target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 448 512" aria-hidden="true" focusable="false">
+              <path fill="#0A66C2"
+                d="M100.3 448H7.4V149.5h92.9V448zM53.8 108.1C24.1 108.1 0 83.9 0 54.2 0 24.5 24.1.4 53.8.4c29.7 0 53.9 24.1 53.9 53.8 0 29.7-24.2 53.9-53.9 53.9zM447.9 448h-92.5V302.4c0-34.7-.7-79.3-48.3-79.3-48.3 0-55.7 37.7-55.7 76.7V448h-92.6V149.5h88.9v40.8h1.3c12.4-23.6 42.6-48.3 87.7-48.3 93.8 0 111 61.8 111 142.3V448z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <figure class="hero-visual">
+        <div class="phylogeny-frame">
+          <img class="phylogeny-image" src="images/phylogeny.png" alt="Phylogenetic tree visualization">
+        </div>
+        <figcaption class="visual-caption">Research focus visualized through phylogeny</figcaption>
+      </figure>
+    </section>
+    <section class="tweet-section" data-hide-header-trigger>
+      <h2>Recent Papers</h2>
+      <div class="tweet-pins">
+        <div class="tweet-pin">
+          <blockquote class="twitter-tweet" data-lang="ja">
+            <a href="https://twitter.com/YuSugiharaY/status/1863549661522645256"></a>
+          </blockquote>
+        </div>
+        <div class="tweet-pin">
+          <blockquote class="twitter-tweet" data-lang="ja">
+            <a href="https://twitter.com/YuSugiharaY/status/1802655490763088169"></a>
+          </blockquote>
+        </div>
+        <div class="tweet-pin">
+          <blockquote class="twitter-tweet" data-lang="ja">
+            <a href="https://twitter.com/YuSugiharaY/status/1549995725043515393"></a>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year" data-launch-year="2021"></span> Yu Sugihara</p>
+    </footer>
+
+    <script>
+      (function () {
+        const yearEl = document.getElementById('year');
+        if (yearEl) {
+          const launchYear = Number(yearEl.dataset.launchYear);
+          const currentYear = new Date().getFullYear();
+          if (Number.isFinite(launchYear) && launchYear > 1900 && launchYear <= currentYear) {
+            yearEl.textContent = launchYear === currentYear ? String(currentYear) : `${launchYear}-${currentYear}`;
+          } else {
+            yearEl.textContent = String(currentYear);
+          }
+        }
+
+        const header = document.querySelector('.site-header');
+        const triggerEl = document.querySelector('[data-hide-header-trigger]');
+        const hideAt = Number(document.body.dataset.headerHideAt);
+        if (!header) return;
+        if (!Number.isFinite(hideAt) && !triggerEl) return;
+
+        const toggleHeader = () => {
+          const triggerY = Number.isFinite(hideAt)
+            ? hideAt
+            : (triggerEl.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 8);
+          document.body.classList.toggle('hide-sticky-header', window.scrollY >= triggerY);
+        };
+
+        toggleHeader();
+        window.addEventListener('scroll', toggleHeader, { passive: true });
+        window.addEventListener('resize', toggleHeader);
+      })();
+    </script>
+  
+  </main>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>
