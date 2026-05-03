@@ -393,12 +393,6 @@ body.hide-sticky-header .site-header{
 
 .page-publications .chips{ margin-top:10px; }
 
-.page-publications.hide-sticky-header .site-header{
-  transform:none;
-  opacity:1;
-  pointer-events:auto;
-}
-
 .chips{
   display:flex;
   flex-wrap:wrap;
