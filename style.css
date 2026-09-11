@@ -468,6 +468,101 @@ body.hide-sticky-header .site-header{
   font-weight:700;
 }
 
+/* Team Highlights */
+.highlights-header{
+  margin-bottom:22px;
+}
+
+.highlights-header h1{
+  font-size:clamp(1.9rem, 3.8vw, 2.7rem);
+}
+
+.highlights-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:clamp(18px, 2.6vw, 28px);
+}
+
+.highlight-card{
+  min-width:0;
+  overflow:hidden;
+  background:rgba(255,255,255,.96);
+  border:1px solid #d8e3ec;
+  border-radius:20px;
+  box-shadow:0 12px 28px rgba(15,23,42,.08);
+}
+
+.highlight-photo{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  color:#fff;
+  background:#dce5ee;
+  text-decoration:none;
+}
+
+.highlight-photo::after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0;
+  height:25%;
+  background:linear-gradient(transparent, rgba(10,20,32,.42));
+  pointer-events:none;
+}
+
+.highlight-photo img{
+  width:100%;
+  height:auto;
+  transition:transform .35s ease;
+}
+
+.highlight-photo:hover img{
+  transform:scale(1.015);
+}
+
+.highlight-photo:focus-visible{
+  border-radius:0;
+  box-shadow:inset var(--focus);
+}
+
+.highlight-post-link{
+  position:absolute;
+  right:14px;
+  bottom:14px;
+  z-index:1;
+  display:inline-flex;
+  align-items:center;
+  padding:7px 11px;
+  border:1px solid rgba(255,255,255,.5);
+  border-radius:var(--radius-pill);
+  color:#fff;
+  background:rgba(10,20,32,.72);
+  backdrop-filter:blur(7px);
+  font-size:.82rem;
+  font-weight:700;
+  line-height:1.2;
+}
+
+.highlight-card-body{
+  padding:18px 20px 21px;
+}
+
+.highlight-meta{
+  margin-bottom:8px;
+  color:#597086;
+  font-size:.82rem;
+  font-weight:700;
+  letter-spacing:.025em;
+  text-transform:uppercase;
+}
+
+.highlight-comment{
+  color:var(--text);
+  font-size:clamp(1rem, 1.5vw, 1.08rem);
+  font-weight:600;
+  line-height:1.5;
+}
+
 /* CV */
 .page-cv .hero.cv{
   grid-template-columns:180px minmax(0, 1fr);
@@ -571,6 +666,10 @@ body.hide-sticky-header .site-header{
 
   .page-publications .card ol{ padding-left:1.16rem; }
   .page-publications .card ol > li{ margin-bottom:.96rem; padding-bottom:.92rem; }
+
+  .highlights-grid{ grid-template-columns:1fr; }
+  .highlights-header{ margin-bottom:16px; }
+  .highlight-card-body{ padding:16px 17px 19px; }
 }
 
 @media (prefers-reduced-motion: reduce){

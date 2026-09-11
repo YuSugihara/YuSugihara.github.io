@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Team Highlights — Yu Sugihara</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-highlights" data-header-hide-at="28">
+  <header class="site-header">
+    <a class="brand" href="index.html">Yu Sugihara</a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="team-highlights.html" aria-current="page">Highlights</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <header class="highlights-header" data-hide-header-trigger>
+      <h1>Team Highlights</h1>
+    </header>
+
+    <section class="highlights-grid" aria-label="Research team highlights">
+      <article class="highlight-card">
+        <a class="highlight-photo" href="https://x.com/guavadk/status/2097711549490123099?s=20" target="_blank" rel="noopener" aria-label="View Gaurav Adhikari's post on X">
+          <img src="images/highlights/gaurav-ppath2026.webp" alt="Gaurav Adhikari and Yu Sugihara standing beside Gaurav's poster at PPATH2026" width="900" height="1200" />
+          <span class="highlight-post-link">View post on X ↗</span>
+        </a>
+        <div class="highlight-card-body">
+          <p class="highlight-meta">PPATH2026 · September 9, 2026</p>
+          <p class="highlight-comment">Gaurav presented a harmonized dataset of 305 <span class="italic">Fusarium</span> genomes developed as part of his MSc project!</p>
+        </div>
+      </article>
+
+      <article class="highlight-card">
+        <a class="highlight-photo" href="https://x.com/juazcue/status/2097645056249237638?s=20" target="_blank" rel="noopener" aria-label="View Juan Azcue's post on X">
+          <img src="images/highlights/juan-ppath2026.webp" alt="Juan Azcue and Yu Sugihara standing beside Juan's poster at PPATH2026" width="900" height="1200" />
+          <span class="highlight-post-link">View post on X ↗</span>
+        </a>
+        <div class="highlight-card-body">
+          <p class="highlight-meta">ECPP2026 · September 8, 2026</p>
+          <p class="highlight-comment">Juan presented SOLO1, a new single-gene NLR scaffold for engineering plant disease resistance!</p>
+        </div>
+      </article>
+    </section>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year" data-launch-year="2021"></span> Yu Sugihara</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const yearEl = document.getElementById('year');
+      if (yearEl) {
+        const launchYear = Number(yearEl.dataset.launchYear);
+        const currentYear = new Date().getFullYear();
+        if (Number.isFinite(launchYear) && launchYear > 1900 && launchYear <= currentYear) {
+          yearEl.textContent = launchYear === currentYear ? String(currentYear) : `${launchYear}-${currentYear}`;
+        } else {
+          yearEl.textContent = String(currentYear);
+        }
+      }
+
+      const header = document.querySelector('.site-header');
+      const triggerEl = document.querySelector('[data-hide-header-trigger]');
+      const hideAt = Number(document.body.dataset.headerHideAt);
+      if (!header) return;
+      if (!Number.isFinite(hideAt) && !triggerEl) return;
+
+      const toggleHeader = () => {
+        const triggerY = Number.isFinite(hideAt)
+          ? hideAt
+          : (triggerEl.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 8);
+        document.body.classList.toggle('hide-sticky-header', window.scrollY >= triggerY);
+      };
+
+      toggleHeader();
+      window.addEventListener('scroll', toggleHeader, { passive: true });
+      window.addEventListener('resize', toggleHeader);
+    })();
+  </script>
+</body>
+</html>
