@@ -469,6 +469,10 @@ body.hide-sticky-header .site-header{
 }
 
 /* Team Highlights */
+.page-highlights .container{
+  width:min(840px, 92vw);
+}
+
 .highlights-header{
   margin-bottom:22px;
 }
@@ -479,7 +483,8 @@ body.hide-sticky-header .site-header{
 
 .highlights-grid{
   display:grid;
-  grid-template-columns:repeat(2, minmax(0, 1fr));
+  grid-template-columns:repeat(2, minmax(0, 390px));
+  justify-content:center;
   gap:clamp(18px, 2.6vw, 28px);
 }
 
@@ -667,7 +672,8 @@ body.hide-sticky-header .site-header{
   .page-publications .card ol{ padding-left:1.16rem; }
   .page-publications .card ol > li{ margin-bottom:.96rem; padding-bottom:.92rem; }
 
-  .highlights-grid{ grid-template-columns:1fr; }
+  .page-highlights .container{ width:min(390px, 92vw); }
+  .highlights-grid{ grid-template-columns:minmax(0, 1fr); }
   .highlights-header{ margin-bottom:16px; }
   .highlight-card-body{ padding:16px 17px 19px; }
 }
